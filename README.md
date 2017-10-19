@@ -5,3 +5,5 @@ Swift Reference 및 Test Code
 2. RxCocoa
 3. Alamofire
 4. Result
+5. Currying
+6. Bind
