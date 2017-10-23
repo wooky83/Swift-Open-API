@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  MainVC.swift
 //  SwiftReference
 //
 //  Created by wooky83 on 2017. 10. 18..
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+class MainVC: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
