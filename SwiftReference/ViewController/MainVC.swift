@@ -46,7 +46,6 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         case .rxCocoa(let title):
             cell.textLabel?.text = title
         }
-        
         return cell
     }
     
