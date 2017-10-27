@@ -45,7 +45,7 @@ class RxCoCoaVC: UIViewController {
                 }
         }.disposed(by: disposeBag)
         
-        joinBtn.rx.tap.subscribe { _ in print("buttonTap")}.disposed(by: disposeBag)
+        joinBtn.rx.tap.subscribe { _ in print("buttonTap")}.disposed(by: disposeBag)        
     }
     
     override func didReceiveMemoryWarning() {
