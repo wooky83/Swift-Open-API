@@ -37,9 +37,9 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         return topicArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: CSCell = tableView.dequeueReusableCell(forindexPath: indexPath)
+        
         switch topicArray[indexPath.row] {
         case .rxSwift(let title):
             cell.textLabel?.text = title
