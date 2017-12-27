@@ -9,7 +9,7 @@ target 'SwiftReference' do
     pod 'RxSwift',    '4.0'
     pod 'RxCocoa',    ‘4.0'
     pod 'Alamofire',  '~>4.5.1'
-    pod 'Result’,     ‘~>3.2.4’
+    pod 'AlamofireImage', '~> 3.3'
     pod ‘RxAlamofire’
 
   target 'SwiftReferenceTests' do

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DC4615F6447961AC8F0ED246071F3D7"
-               BuildableName = "Pods_SwiftReferenceTests.framework"
-               BlueprintName = "Pods-SwiftReferenceTests"
+               BlueprintIdentifier = "9EFE4C70245EE2857D336B8B9FA4E825"
+               BuildableName = "AlamofireImage.framework"
+               BlueprintName = "AlamofireImage"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DC4615F6447961AC8F0ED246071F3D7"
-            BuildableName = "Pods_SwiftReferenceTests.framework"
-            BlueprintName = "Pods-SwiftReferenceTests"
+            BlueprintIdentifier = "9EFE4C70245EE2857D336B8B9FA4E825"
+            BuildableName = "AlamofireImage.framework"
+            BlueprintName = "AlamofireImage"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

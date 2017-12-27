@@ -19,14 +19,24 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         topicArray.append(Row.rxSwift("rxSwift"))
         topicArray.append(Row.rxCocoa("rxCoCoa"))
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if #available(iOS 11.0, *) {
+            print("Test")
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
 }
