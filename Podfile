@@ -6,11 +6,11 @@ target 'SwiftReference' do
   use_frameworks!
 
   # Pods for SwiftReference
-    pod 'RxSwift',    '4.0'
-    pod 'RxCocoa',    ‘4.0'
-    pod 'Alamofire',  '~>4.5.1'
-    pod 'AlamofireImage', '~> 3.3'
-    pod ‘RxAlamofire’
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'Alamofire'
+    pod 'AlamofireImage'
+    pod 'RxAlamofire'
 
   target 'SwiftReferenceTests' do
     inherit! :search_paths

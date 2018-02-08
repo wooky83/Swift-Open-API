@@ -7,22 +7,19 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MainVC: UIViewController {
     
-    enum Row {
-        case rxSwift(String)
-        case rxCocoa(String)
-    }
-    var topicArray: [Row] = []
+    private var subjects: Variable<[String]> = Variable(["hi", "gg"])
+    private let disposeBag = DisposeBag()
+    
     @IBOutlet weak var mainTableView : UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topicArray.append(Row.rxSwift("rxSwift"))
-        topicArray.append(Row.rxCocoa("rxCoCoa"))
-        
-        
+        setupObservable()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,43 +29,21 @@ class MainVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if #available(iOS 11.0, *) {
-            print("Test")
-        } else {
-            // Fallback on earlier versions
-        }
     }
 
-}
-
-extension MainVC: UITableViewDataSource, UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topicArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CSCell = tableView.dequeueReusableCell(forindexPath: indexPath)
+    private func setupObservable() {
+        mainTableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+            guard let `self` = self else {return}
+            self.mainTableView.deselectRow(at: indexPath, animated: true)
+            self.performSegue(withIdentifier: "rxSwift", sender: nil)
+           
+        }).disposed(by: disposeBag)
         
-        switch topicArray[indexPath.row] {
-        case .rxSwift(let title):
-            cell.textLabel?.text = title
-        case .rxCocoa(let title):
-            cell.textLabel?.text = title
-        }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        switch topicArray[indexPath.row] {
-        case .rxSwift(let title):
-            performSegue(withIdentifier: title, sender: nil)
-        case .rxCocoa(let title):
-            performSegue(withIdentifier: title, sender: nil)
-        }
-        
+        self.subjects.asObservable().bind(to: self.mainTableView.rx.items) { tableView, row, data in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CSCell")!
+            cell.textLabel?.text = data
+            return cell
+        }.disposed(by: disposeBag)
     }
     
 }
-

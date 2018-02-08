@@ -15,6 +15,8 @@ class RxCoCoaVC: UIViewController {
     @IBOutlet weak var idTextF: UITextField!
     @IBOutlet weak var passwordTextF: UITextField!
     @IBOutlet weak var joinBtn: UIButton!
+    @IBOutlet weak var bindTextF: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
     
     let disposeBag = DisposeBag()
     
@@ -32,6 +34,7 @@ class RxCoCoaVC: UIViewController {
         Observable.combineLatest(idObj, pwObj) {
             return ($0, $1)
             }.subscribe {
+                print("Look")
                 switch $0 {
                 case .next(true, true):
                     print("111")
@@ -46,6 +49,14 @@ class RxCoCoaVC: UIViewController {
         }.disposed(by: disposeBag)
         
         joinBtn.rx.tap.subscribe { _ in print("buttonTap")}.disposed(by: disposeBag)
+        
+        let xx: String? = "1"
+        print(String(describing:xx))
+        
+        bindTextF.rx.text.map { arg in
+            print(String(describing:arg))
+            return "\(arg!) : whyNot"
+            }.bind(to: resultLabel.rx.text).disposed(by: disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
