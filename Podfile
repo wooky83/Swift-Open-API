@@ -8,9 +8,6 @@ target 'SwiftReference' do
   # Pods for SwiftReference
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'Alamofire'
-    pod 'AlamofireImage'
-    pod 'RxAlamofire'
 
   target 'SwiftReferenceTests' do
     inherit! :search_paths

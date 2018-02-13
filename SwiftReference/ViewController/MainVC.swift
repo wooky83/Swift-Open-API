@@ -12,7 +12,11 @@ import RxSwift
 
 class MainVC: UIViewController {
     
-    private var subjects: Variable<[String]> = Variable(["hi", "gg"])
+    private var subjects: Variable<[(String, String)]> = Variable([
+        ("UIButton, UITextField", String(describing:BtnTxtFieldVC.self)),
+        ("UISearchBar", String(describing:SearchVC.self))
+    ])
+    
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var mainTableView : UITableView!
@@ -20,6 +24,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservable()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,13 +40,13 @@ class MainVC: UIViewController {
         mainTableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
             guard let `self` = self else {return}
             self.mainTableView.deselectRow(at: indexPath, animated: true)
-            self.performSegue(withIdentifier: "rxSwift", sender: nil)
+            self.performSegue(withIdentifier: self.subjects.value[indexPath.row].1, sender: nil)
            
         }).disposed(by: disposeBag)
         
         self.subjects.asObservable().bind(to: self.mainTableView.rx.items) { tableView, row, data in
             let cell = tableView.dequeueReusableCell(withIdentifier: "CSCell")!
-            cell.textLabel?.text = data
+            cell.textLabel?.text = data.0
             return cell
         }.disposed(by: disposeBag)
     }

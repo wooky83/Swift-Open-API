@@ -14,8 +14,9 @@
 		3C409E6B1F97275700159D84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C409E691F97275700159D84 /* LaunchScreen.storyboard */; };
 		3C409E761F97275700159D84 /* SwiftReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C409E751F97275700159D84 /* SwiftReferenceTests.swift */; };
 		3C409E811F97275700159D84 /* SwiftReferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C409E801F97275700159D84 /* SwiftReferenceUITests.swift */; };
-		3C82EFFF1F9DD37400B34528 /* RxSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82EFFE1F9DD37400B34528 /* RxSwiftVC.swift */; };
-		3C82F0011F9DDC9C00B34528 /* RxCoCoaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82F0001F9DDC9C00B34528 /* RxCoCoaVC.swift */; };
+		3C82EFFF1F9DD37400B34528 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82EFFE1F9DD37400B34528 /* SearchVC.swift */; };
+		3C82F0011F9DDC9C00B34528 /* BtnTxtFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */; };
+		3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92DA4F202C3F4E001D0B1F /* Utility.swift */; };
 		3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */; };
 		3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */; };
 		3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2E1FA300940046E9BB /* CSCell.swift */; };
@@ -57,8 +58,9 @@
 		3C409E7C1F97275700159D84 /* SwiftReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C409E801F97275700159D84 /* SwiftReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReferenceUITests.swift; sourceTree = "<group>"; };
 		3C409E821F97275700159D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C82EFFE1F9DD37400B34528 /* RxSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftVC.swift; sourceTree = "<group>"; };
-		3C82F0001F9DDC9C00B34528 /* RxCoCoaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoCoaVC.swift; sourceTree = "<group>"; };
+		3C82EFFE1F9DD37400B34528 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnTxtFieldVC.swift; sourceTree = "<group>"; };
+		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
 		3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3CEFBB2E1FA300940046E9BB /* CSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
@@ -99,12 +101,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0629FE202D3E9F00D06FA1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		3C0A8D411F9DC774001E98BA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3C409E601F97275700159D84 /* MainVC.swift */,
-				3C82EFFE1F9DD37400B34528 /* RxSwiftVC.swift */,
-				3C82F0001F9DDC9C00B34528 /* RxCoCoaVC.swift */,
+				3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */,
+				3C82EFFE1F9DD37400B34528 /* SearchVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 			children = (
 				3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */,
 				3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */,
+				3C92DA4F202C3F4E001D0B1F /* Utility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 		3C409E5D1F97275700159D84 /* SwiftReference */ = {
 			isa = PBXGroup;
 			children = (
+				3C0629FE202D3E9F00D06FA1 /* Network */,
 				3C0A8D411F9DC774001E98BA /* ViewController */,
 				3C0A8D421F9DC77E001E98BA /* Model */,
 				3C0A8D441F9DC7D1001E98BA /* View */,
@@ -429,17 +440,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -521,10 +526,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C82EFFF1F9DD37400B34528 /* RxSwiftVC.swift in Sources */,
-				3C82F0011F9DDC9C00B34528 /* RxCoCoaVC.swift in Sources */,
+				3C82EFFF1F9DD37400B34528 /* SearchVC.swift in Sources */,
+				3C82F0011F9DDC9C00B34528 /* BtnTxtFieldVC.swift in Sources */,
 				3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */,
 				3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */,
+				3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */,
 				3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */,
 				3C409E5F1F97275700159D84 /* AppDelegate.swift in Sources */,
 				3C409E611F97275700159D84 /* MainVC.swift in Sources */,

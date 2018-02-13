@@ -33,4 +33,9 @@ class SwiftReferenceTests: XCTestCase {
         }
     }
     
+    func testStringDigits() {
+        let result = Utility.stringDigitsFromString("010-1234-5678")
+        XCTAssert(result == "01012345678", "digit Fail!!")
+    }
+    
 }
