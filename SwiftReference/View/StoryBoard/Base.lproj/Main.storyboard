@@ -62,6 +62,7 @@
                         <outlet property="mainTableView" destination="wDc-1s-672" id="jkQ-0M-9x5"/>
                         <segue destination="Dqv-k0-RQY" kind="show" identifier="SearchVC" id="Opk-It-1Pw"/>
                         <segue destination="Kb6-LH-eqs" kind="show" identifier="BtnTxtFieldVC" id="ppE-KI-jJ3"/>
+                        <segue destination="eKx-lu-ckf" kind="show" identifier="SubjectsVC" id="jqS-3H-rvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -158,6 +159,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfX-ig-b0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="366.50246305418722"/>
+        </scene>
+        <!--Subjects-->
+        <scene sceneID="Onh-hh-C0u">
+            <objects>
+                <viewController title="Subjects" id="eKx-lu-ckf" customClass="SubjectsVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UfR-7J-yuQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="q5s-qq-Nq4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfG-AP-w34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1498" y="367"/>
         </scene>
     </scenes>
 </document>

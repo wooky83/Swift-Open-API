@@ -13,8 +13,9 @@ import RxSwift
 class MainVC: UIViewController {
     
     private var subjects: Variable<[(String, String)]> = Variable([
-        ("UIButton, UITextField", String(describing:BtnTxtFieldVC.self)),
-        ("UISearchBar", String(describing:SearchVC.self))
+        ("UIButton, UITextField", String(describing: BtnTxtFieldVC.self)),
+        ("UISearchBar", String(describing: SearchVC.self)),
+        ("Subjects(Publish, Replay, Behavior, Variable)", String(describing: SubjectsVC.self))
     ])
     
     private let disposeBag = DisposeBag()
