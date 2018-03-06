@@ -1,4 +1,4 @@
-# SwiftReference
+# RxSwift Sample Code
 
 Swift Reference 및 Test Code
 1. RxSwift
