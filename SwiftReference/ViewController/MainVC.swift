@@ -46,7 +46,7 @@ class MainVC: UIViewController {
         }).disposed(by: disposeBag)
         
         self.subjects.asObservable().bind(to: self.mainTableView.rx.items) { tableView, row, data in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CSCell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(CSCell.self)")!
             cell.textLabel?.text = data.0
             return cell
         }.disposed(by: disposeBag)

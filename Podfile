@@ -6,17 +6,9 @@ target 'SwiftReference' do
   use_frameworks!
 
   # Pods for SwiftReference
-    pod 'RxSwift'
-    pod 'RxCocoa'
-
-  target 'SwiftReferenceTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'SwiftReferenceUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'RxSwift', '~> 4.4.0'
+    pod 'RxCocoa', '~> 4.4.0'
+    pod 'RxSwiftExt'
+    pod 'RxOptional'
 
 end

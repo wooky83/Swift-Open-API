@@ -13,10 +13,18 @@ import RxCocoa
 class SubjectsVC: UIViewController {
 
     private let disposeBag = DisposeBag()
+    @IBOutlet weak var a1: UIView!
+    @IBOutlet weak var a2: UIView!
+    @IBOutlet weak var a3: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let window = (UIApplication.shared.delegate as? AppDelegate)?.window ?? nil
+        let frameRect = a3.convert(CGRect.zero, to: window)
+        print(frameRect)
+        
+        
         // Do any additional setup after loading the view.
         
         let publish = PublishSubject<Int>()

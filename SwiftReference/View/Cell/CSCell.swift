@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CSCell : UITableViewCell, ReusableView, NibLoadableView {
+class CSCell: UITableViewCell, ReusableView, NibLoadableView {
     
 }

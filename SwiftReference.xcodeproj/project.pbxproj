@@ -143,8 +143,8 @@
 		3C0A8D441F9DC7D1001E98BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C886E8F21C9E5160064636F /* Cell */,
 				3CEFBB2B1FA2FF3B0046E9BB /* StoryBoard */,
-				3CEFBB2E1FA300940046E9BB /* CSCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +205,14 @@
 			path = SwiftReferenceUITests;
 			sourceTree = "<group>";
 		};
+		3C886E8F21C9E5160064636F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3CEFBB2E1FA300940046E9BB /* CSCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3CEFBB2B1FA2FF3B0046E9BB /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +257,6 @@
 				3C409E581F97275700159D84 /* Frameworks */,
 				3C409E591F97275700159D84 /* Resources */,
 				7D63FCF8102CA7826D6BB418 /* [CP] Embed Pods Frameworks */,
-				AFC4A95F66B26D28FFA9D63F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,8 +275,6 @@
 				3C409E6D1F97275700159D84 /* Sources */,
 				3C409E6E1F97275700159D84 /* Frameworks */,
 				3C409E6F1F97275700159D84 /* Resources */,
-				5694E58CFDB8D5957B64D46E /* [CP] Embed Pods Frameworks */,
-				742273ABAC3B03E8EBC438A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,8 +294,6 @@
 				3C409E781F97275700159D84 /* Sources */,
 				3C409E791F97275700159D84 /* Frameworks */,
 				3C409E7A1F97275700159D84 /* Resources */,
-				82C31384D5E9C71898CFB7E6 /* [CP] Embed Pods Frameworks */,
-				4F7CA7A1F5D9283AEA973DFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,51 +398,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F7CA7A1F5D9283AEA973DFF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReferenceUITests/Pods-SwiftReferenceUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5694E58CFDB8D5957B64D46E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReferenceTests/Pods-SwiftReferenceTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		742273ABAC3B03E8EBC438A6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReferenceTests/Pods-SwiftReferenceTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7D63FCF8102CA7826D6BB418 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,47 +405,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82C31384D5E9C71898CFB7E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReferenceUITests/Pods-SwiftReferenceUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AFC4A95F66B26D28FFA9D63F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE7182D5345D44B967AE80D7 /* [CP] Check Pods Manifest.lock */ = {
@@ -711,6 +645,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = SwiftReference/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -726,6 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftReference/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
