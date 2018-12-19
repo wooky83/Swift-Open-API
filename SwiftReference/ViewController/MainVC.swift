@@ -9,16 +9,20 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import RxDataSources
 
 class MainVC: UIViewController {
-    
-    private var subjects: Variable<[(String, String)]> = Variable([
-        ("UIButton, UITextField", String(describing: BtnTxtFieldVC.self)),
-        ("UISearchBar", String(describing: SearchVC.self)),
-        ("Subjects(Publish, Replay, Behavior, Variable)", String(describing: SubjectsVC.self))
-    ])
-    
-    private let disposeBag = DisposeBag()
+
+    let bundleName = Bundle.main.infoDictionary!["CFBundleName"] as! String
+    private let sections = [
+        SectionOfCustomData(header: "RxCocoa", items:
+            [CustomData(title: "UIButton, UITextField", identity: "\(BtnTxtFieldVC.self)", useNib: true),
+             CustomData(title: "UISearchBar", identity: "\(SearchVC.self)", useNib: true)]
+        ),
+        SectionOfCustomData(header: "Subjects", items:
+            [CustomData(title: "Subjects(Publish, Replay, Behavior, Variable)", identity: "\(SubjectsVC.self)", useNib: true)]
+        )
+    ]
     
     @IBOutlet weak var mainTableView : UITableView!
     
@@ -41,15 +45,52 @@ class MainVC: UIViewController {
         mainTableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
             guard let `self` = self else {return}
             self.mainTableView.deselectRow(at: indexPath, animated: true)
-            self.performSegue(withIdentifier: self.subjects.value[indexPath.row].1, sender: nil)
+            
+            let data = self.sections[indexPath.section].items[indexPath.row]
+
+            if data.useNib {
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: data.identity)
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if let dynamicClass = NSClassFromString(self.bundleName+"."+data.identity) as? UIViewController.Type {
+                let vc = dynamicClass.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
            
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
         
-        self.subjects.asObservable().bind(to: self.mainTableView.rx.items) { tableView, row, data in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(CSCell.self)")!
-            cell.textLabel?.text = data.0
+        let dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData>(configureCell: { dataSource, tableView, indexPath, item in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(CSCell.self)", for: indexPath)
+            cell.textLabel?.text = item.title
             return cell
-        }.disposed(by: disposeBag)
+        })
+        
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].header
+        }
+        
+        Observable.just(sections)
+            .bind(to: mainTableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
     }
     
+}
+
+struct CustomData {
+    let title: String
+    let identity: String
+    let useNib: Bool
+}
+
+struct SectionOfCustomData {
+    var header: String
+    var items: [Item]
+}
+
+extension SectionOfCustomData: SectionModelType {
+    typealias Item = CustomData
+    
+    init(original: SectionOfCustomData, items: [Item]) {
+        self = original
+        self.items = items
+    }
 }

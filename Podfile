@@ -8,6 +8,7 @@ target 'SwiftReference' do
   # Pods for SwiftReference
     pod 'RxSwift', '~> 4.4.0'
     pod 'RxCocoa', '~> 4.4.0'
+    pod 'RxDataSources', '~> 3.1.0'
     pod 'RxSwiftExt'
     pod 'RxOptional'
 

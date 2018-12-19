@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-136" y="-234"/>
         </scene>
-        <!--Reactive-->
+        <!--Rx-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MainVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,12 +60,9 @@
                             <constraint firstItem="wDc-1s-672" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="tjM-l9-EOh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Reactive" id="4R3-na-qd1"/>
+                    <navigationItem key="navigationItem" title="Rx" id="4R3-na-qd1"/>
                     <connections>
                         <outlet property="mainTableView" destination="wDc-1s-672" id="jkQ-0M-9x5"/>
-                        <segue destination="Dqv-k0-RQY" kind="show" identifier="SearchVC" id="Opk-It-1Pw"/>
-                        <segue destination="Kb6-LH-eqs" kind="show" identifier="BtnTxtFieldVC" id="ppE-KI-jJ3"/>
-                        <segue destination="eKx-lu-ckf" kind="show" identifier="SubjectsVC" id="jqS-3H-rvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -75,7 +72,7 @@
         <!--TextField and Button-->
         <scene sceneID="jQH-9Y-1FR">
             <objects>
-                <viewController title="TextField and Button" id="Kb6-LH-eqs" customClass="BtnTxtFieldVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BtnTxtFieldVC" title="TextField and Button" id="Kb6-LH-eqs" customClass="BtnTxtFieldVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bdx-Os-y0S"/>
                         <viewControllerLayoutGuide type="bottom" id="bme-uG-jCy"/>
@@ -128,7 +125,7 @@
         <!--Search-->
         <scene sceneID="qCy-Uu-dEs">
             <objects>
-                <viewController title="Search" id="Dqv-k0-RQY" customClass="SearchVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" title="Search" id="Dqv-k0-RQY" customClass="SearchVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Et4-ui-f2c"/>
                         <viewControllerLayoutGuide type="bottom" id="F4K-53-e65"/>
@@ -138,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-Su-x7b">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" placeholder="가수 검색" id="0Fu-3r-U2G">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -177,7 +174,7 @@
         <!--Subjects-->
         <scene sceneID="Onh-hh-C0u">
             <objects>
-                <viewController title="Subjects" id="eKx-lu-ckf" customClass="SubjectsVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubjectsVC" title="Subjects" id="eKx-lu-ckf" customClass="SubjectsVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MW1-62-v6G"/>
                         <viewControllerLayoutGuide type="bottom" id="w3F-bR-mIn"/>

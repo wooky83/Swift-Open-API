@@ -44,7 +44,7 @@ class SearchVC: UIViewController {
                 guard let json = json as? [String: Any], let items = json["results"] as? [[String: Any]] else  {
                     return []
                 }
-                return items.flatMap{$0}
+                return items.compactMap{$0}
             }
             .bind(to: self.mainTableView.rx.items) { tableView, row, repo in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
