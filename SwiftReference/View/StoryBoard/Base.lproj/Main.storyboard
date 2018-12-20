@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="366.50246305418722"/>
         </scene>
-        <!--Subjects-->
+        <!--TableView+RxDataSource-->
         <scene sceneID="Onh-hh-C0u">
             <objects>
-                <viewController storyboardIdentifier="SubjectsVC" title="Subjects" id="eKx-lu-ckf" customClass="SubjectsVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableViewDataSourceVC" title="TableView+RxDataSource" id="eKx-lu-ckf" customClass="TableViewDataSourceVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MW1-62-v6G"/>
                         <viewControllerLayoutGuide type="bottom" id="w3F-bR-mIn"/>
@@ -183,37 +183,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-3A-Etw">
-                                <rect key="frame" x="41" y="236" width="301" height="212"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5us-jN-Bq0">
-                                        <rect key="frame" x="30" y="42" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uj-YU-g9O">
-                                                <rect key="frame" x="44" y="18" width="153" height="92"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.074509803920000006" green="0.76470588240000004" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.44705882349999998" green="0.47843137250000001" blue="0.50980392159999999" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-Be-2iv">
-                                <rect key="frame" x="159" y="314" width="153" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.17254901959999999" green="0.19215686269999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uj7-LV-bWe">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CSCell" id="tA8-Fz-mlR" customClass="CSCell" customModule="SwiftReference" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tA8-Fz-mlR" id="K5F-Mo-vmy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uj7-LV-bWe" firstAttribute="top" secondItem="MW1-62-v6G" secondAttribute="bottom" id="DMm-BY-dkn"/>
+                            <constraint firstAttribute="trailing" secondItem="Uj7-LV-bWe" secondAttribute="trailing" id="ZpO-hu-UdF"/>
+                            <constraint firstItem="w3F-bR-mIn" firstAttribute="top" secondItem="Uj7-LV-bWe" secondAttribute="bottom" id="c65-bO-Dy8"/>
+                            <constraint firstItem="Uj7-LV-bWe" firstAttribute="leading" secondItem="UfR-7J-yuQ" secondAttribute="leading" id="yvf-6W-5wP"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="a1" destination="p8e-3A-Etw" id="CQ0-zt-byb"/>
-                        <outlet property="a2" destination="5us-jN-Bq0" id="slj-mv-13v"/>
-                        <outlet property="a3" destination="0Uj-YU-g9O" id="XWX-G8-ki8"/>
+                        <outlet property="mainTableView" destination="Uj7-LV-bWe" id="jph-KV-H5G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfG-AP-w34" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,10 +16,10 @@
 		3C409E811F97275700159D84 /* SwiftReferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C409E801F97275700159D84 /* SwiftReferenceUITests.swift */; };
 		3C82EFFF1F9DD37400B34528 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82EFFE1F9DD37400B34528 /* SearchVC.swift */; };
 		3C82F0011F9DDC9C00B34528 /* BtnTxtFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */; };
+		3C874E3221CB69A7009D819D /* TableViewDataSourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */; };
 		3C886E9121C9FECD0064636F /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C886E9021C9FECD0064636F /* NSObject+Rx.swift */; };
 		3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92DA4F202C3F4E001D0B1F /* Utility.swift */; };
 		3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */; };
-		3CE1DD40204E6B0C00AF2293 /* SubjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1DD3F204E6B0C00AF2293 /* SubjectsVC.swift */; };
 		3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */; };
 		3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2E1FA300940046E9BB /* CSCell.swift */; };
 		3CF3EE9E203A9F2E00A417DB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CF3EE9D203A9F2E00A417DB /* README.md */; };
@@ -61,10 +61,11 @@
 		3C409E821F97275700159D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C82EFFE1F9DD37400B34528 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnTxtFieldVC.swift; sourceTree = "<group>"; };
+		3C874E2E21CB35AC009D819D /* Ex_Throttle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Throttle.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceVC.swift; sourceTree = "<group>"; };
 		3C886E9021C9FECD0064636F /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
-		3CE1DD3F204E6B0C00AF2293 /* SubjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsVC.swift; sourceTree = "<group>"; };
 		3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3CEFBB2E1FA300940046E9BB /* CSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
 		3CF3EE9D203A9F2E00A417DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -112,7 +113,7 @@
 				3C409E601F97275700159D84 /* MainVC.swift */,
 				3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */,
 				3C82EFFE1F9DD37400B34528 /* SearchVC.swift */,
-				3CE1DD3F204E6B0C00AF2293 /* SubjectsVC.swift */,
+				3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -169,6 +170,7 @@
 		3C409E5D1F97275700159D84 /* SwiftReference */ = {
 			isa = PBXGroup;
 			children = (
+				3C874E2D21CB3543009D819D /* Playground */,
 				3C0629FE202D3E9F00D06FA1 /* Network */,
 				3C0A8D411F9DC774001E98BA /* ViewController */,
 				3C0A8D421F9DC77E001E98BA /* Model */,
@@ -198,6 +200,30 @@
 				3C409E821F97275700159D84 /* Info.plist */,
 			);
 			path = SwiftReferenceUITests;
+			sourceTree = "<group>";
+		};
+		3C874E2D21CB3543009D819D /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				3C874E3021CB5981009D819D /* Rx_Subjects */,
+				3C874E2F21CB596B009D819D /* Rx_Operator */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
+		3C874E2F21CB596B009D819D /* Rx_Operator */ = {
+			isa = PBXGroup;
+			children = (
+				3C874E2E21CB35AC009D819D /* Ex_Throttle.playground */,
+			);
+			path = Rx_Operator;
+			sourceTree = "<group>";
+		};
+		3C874E3021CB5981009D819D /* Rx_Subjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rx_Subjects;
 			sourceTree = "<group>";
 		};
 		3C886E8F21C9E5160064636F /* Cell */ = {
@@ -429,8 +455,8 @@
 				3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */,
 				3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */,
 				3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */,
+				3C874E3221CB69A7009D819D /* TableViewDataSourceVC.swift in Sources */,
 				3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */,
-				3CE1DD40204E6B0C00AF2293 /* SubjectsVC.swift in Sources */,
 				3C409E5F1F97275700159D84 /* AppDelegate.swift in Sources */,
 				3C409E611F97275700159D84 /* MainVC.swift in Sources */,
 				3C886E9121C9FECD0064636F /* NSObject+Rx.swift in Sources */,
