@@ -30,3 +30,7 @@ func >>=<A, B>(a: A?, f: (A) -> B?) -> B?
 {
     return bind(a, f: f)
 }
+
+public func delay(_ when: Double, _ block: @escaping ()->()) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(when * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: block)
+}

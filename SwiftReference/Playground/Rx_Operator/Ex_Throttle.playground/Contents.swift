@@ -2,8 +2,6 @@
 
 import UIKit
 import RxSwift
-import RxOptional
-import RxSwiftExt
 import PlaygroundSupport
 
 let disposeBag = DisposeBag()

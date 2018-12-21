@@ -24,8 +24,7 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupObservable()
-        
+        setupObservable()   
     }
     
     private func setupObservable() {
@@ -33,7 +32,7 @@ class MainVC: UIViewController {
             guard let `self` = self else {return}
             self.mainTableView.deselectRow(at: indexPath, animated: true)
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: self.subjects.value[indexPath.row].identity)
-            self.navigationController?.pushViewController(vc, animated: true)            
+            self.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: rx.disposeBag)
         
         self.subjects.asObservable().bind(to: self.mainTableView.rx.items) { tableView, row, data in
