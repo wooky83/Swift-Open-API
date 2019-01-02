@@ -1,5 +1,14 @@
 PODS:
   - Differentiator (3.1.0)
+  - PromiseKit (6.7.1):
+    - PromiseKit/CorePromise (= 6.7.1)
+    - PromiseKit/Foundation (= 6.7.1)
+    - PromiseKit/UIKit (= 6.7.1)
+  - PromiseKit/CorePromise (6.7.1)
+  - PromiseKit/Foundation (6.7.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.7.1):
+    - PromiseKit/CorePromise
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -22,6 +31,7 @@ PODS:
     - RxSwiftExt/Core
 
 DEPENDENCIES:
+  - PromiseKit (~> 6.7.1)
   - RxCocoa (~> 4.4.0)
   - RxDataSources (~> 3.1.0)
   - RxOptional
@@ -31,6 +41,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Differentiator
+    - PromiseKit
     - RxAtomic
     - RxCocoa
     - RxDataSources
@@ -40,6 +51,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  PromiseKit: ef376fb8b4e92edfeb66bd403b983eaa07fbde0c
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
@@ -47,6 +59,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
 
-PODFILE CHECKSUM: a917be0a0449fc642afc811891c8c9317270400d
+PODFILE CHECKSUM: 912184c7bf2e9d4b93846dd1d652ba186889561d
 
 COCOAPODS: 1.5.3
