@@ -67,6 +67,7 @@
 		3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceVC.swift; sourceTree = "<group>"; };
 		3C874E3321CB7D4E009D819D /* Ex_Debounce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Debounce.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C886E9021C9FECD0064636F /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		3C89EAD121DEEE55000B5433 /* Ex_RxSwiftExt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_RxSwiftExt.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
 		3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 		3C874E2F21CB596B009D819D /* Rx_Operator */ = {
 			isa = PBXGroup;
 			children = (
+				3C89EAD121DEEE55000B5433 /* Ex_RxSwiftExt.playground */,
 				3C85BB6421DC810900F9AD4C /* Ex_Combinelatest.playground */,
 				3C57A43121D5F89600C8579E /* Ex_Sample.playground */,
 				3C874E3321CB7D4E009D819D /* Ex_Debounce.playground */,
