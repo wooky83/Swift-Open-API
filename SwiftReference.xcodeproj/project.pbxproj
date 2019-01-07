@@ -18,6 +18,7 @@
 		3C82F0011F9DDC9C00B34528 /* BtnTxtFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */; };
 		3C874E3221CB69A7009D819D /* TableViewDataSourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */; };
 		3C886E9121C9FECD0064636F /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C886E9021C9FECD0064636F /* NSObject+Rx.swift */; };
+		3C899DD321E33431005E3754 /* SimpleCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */; };
 		3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92DA4F202C3F4E001D0B1F /* Utility.swift */; };
 		3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */; };
 		3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */; };
@@ -67,6 +68,7 @@
 		3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceVC.swift; sourceTree = "<group>"; };
 		3C874E3321CB7D4E009D819D /* Ex_Debounce.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Debounce.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C886E9021C9FECD0064636F /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionVC.swift; sourceTree = "<group>"; };
 		3C89EAD121DEEE55000B5433 /* Ex_RxSwiftExt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_RxSwiftExt.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */,
 				3C82EFFE1F9DD37400B34528 /* SearchVC.swift */,
 				3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */,
+				3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */,
 				3C409E5F1F97275700159D84 /* AppDelegate.swift in Sources */,
 				3C409E611F97275700159D84 /* MainVC.swift in Sources */,
+				3C899DD321E33431005E3754 /* SimpleCollectionVC.swift in Sources */,
 				3C886E9121C9FECD0064636F /* NSObject+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

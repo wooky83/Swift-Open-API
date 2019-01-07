@@ -16,7 +16,8 @@ class MainVC: UIViewController {
     private var subjects: Variable<[(title: String, identity: String)]> = Variable([
         ("UIButton, UITextField", "\(BtnTxtFieldVC.self)"),
         ("UISearchBar", "\(SearchVC.self)"),
-        ("UITableView+RxDataSource", "\(TableViewDataSourceVC.self)")
+        ("UITableView+RxDataSource", "\(TableViewDataSourceVC.self)"),
+        ("Simple+UICollectionView", "\(SimpleCollectionVC.self)")
     ])
     
     
