@@ -33,6 +33,7 @@ class MainVC: UIViewController {
             guard let `self` = self else {return}
             self.mainTableView.deselectRow(at: indexPath, animated: true)
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: self.subjects.value[indexPath.row].identity)
+            vc.title = self.subjects.value[indexPath.row].title
             self.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: rx.disposeBag)
         

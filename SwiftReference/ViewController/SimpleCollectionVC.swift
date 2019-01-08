@@ -36,6 +36,13 @@ class SimpleCollectionVC: UIViewController {
                 cell.setData(md)
             })
             .disposed(by: rx.disposeBag)
+        
+        self.collectionView.rx
+            .itemSelected
+            .subscribe(onNext: { index in
+                print(index)
+            })
+            .disposed(by: rx.disposeBag)
     }
     
 }
