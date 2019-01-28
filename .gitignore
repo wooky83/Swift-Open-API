@@ -8,6 +8,7 @@ reated by https://www.gitignore.io/api/xcode
 ## Build generated
 build/
 DerivedData/
+Pods/
 
 ## Various settings
 *.pbxuser
