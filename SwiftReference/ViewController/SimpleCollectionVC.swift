@@ -2,7 +2,7 @@
 //  SimpleCollectionView.swift
 //  SwiftReference
 //
-//  Created by 1002659 on 07/01/2019.
+//  Created by wooky83 on 07/01/2019.
 //  Copyright © 2019 wooky83. All rights reserved.
 //
 

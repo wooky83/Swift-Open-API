@@ -20,6 +20,7 @@
 		3C886E9121C9FECD0064636F /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C886E9021C9FECD0064636F /* NSObject+Rx.swift */; };
 		3C899DD321E33431005E3754 /* SimpleCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */; };
 		3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92DA4F202C3F4E001D0B1F /* Utility.swift */; };
+		3C95CC2F21FECA6900A3E699 /* RxKeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */; };
 		3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */; };
 		3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */; };
 		3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2E1FA300940046E9BB /* CSCell.swift */; };
@@ -72,6 +73,7 @@
 		3C89EAD121DEEE55000B5433 /* Ex_RxSwiftExt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_RxSwiftExt.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C8FA81821E46A5F00AB5EB7 /* Ex_Share.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Share.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKeyboardVC.swift; sourceTree = "<group>"; };
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
 		3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3CEFBB2E1FA300940046E9BB /* CSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				3C82EFFE1F9DD37400B34528 /* SearchVC.swift */,
 				3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */,
 				3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */,
+				3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
@@ -431,6 +435,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
@@ -470,6 +475,7 @@
 				3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */,
 				3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */,
 				3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */,
+				3C95CC2F21FECA6900A3E699 /* RxKeyboardVC.swift in Sources */,
 				3C874E3221CB69A7009D819D /* TableViewDataSourceVC.swift in Sources */,
 				3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */,
 				3C409E5F1F97275700159D84 /* AppDelegate.swift in Sources */,
@@ -643,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = SwiftReference/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -660,6 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftReference/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

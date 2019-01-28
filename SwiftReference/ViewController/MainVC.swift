@@ -17,7 +17,8 @@ class MainVC: UIViewController {
         ("UIButton, UITextField", "\(BtnTxtFieldVC.self)"),
         ("UISearchBar", "\(SearchVC.self)"),
         ("UITableView+RxDataSource", "\(TableViewDataSourceVC.self)"),
-        ("Simple+UICollectionView", "\(SimpleCollectionVC.self)")
+        ("Simple+UICollectionView", "\(SimpleCollectionVC.self)"),
+        ("RxKeyboard", "\(RxKeyboardVC.self)")
     ])
     
     
