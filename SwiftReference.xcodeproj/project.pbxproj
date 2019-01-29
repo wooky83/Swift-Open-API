@@ -75,6 +75,8 @@
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKeyboardVC.swift; sourceTree = "<group>"; };
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
+		3CAE474C21FEF62C0017CD02 /* Basic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Basic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3CAE474D21FEF9320017CD02 /* When.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = When.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3CEFBB2E1FA300940046E9BB /* CSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
 		3CF3EE9D203A9F2E00A417DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -216,6 +218,7 @@
 		3C874E2D21CB3543009D819D /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				3CAE474B21FEF5E50017CD02 /* Promise */,
 				3C874E3021CB5981009D819D /* Rx_Subjects */,
 				3C874E2F21CB596B009D819D /* Rx_Operator */,
 			);
@@ -248,6 +251,15 @@
 				3CEFBB2E1FA300940046E9BB /* CSCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3CAE474B21FEF5E50017CD02 /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				3CAE474D21FEF9320017CD02 /* When.playground */,
+				3CAE474C21FEF62C0017CD02 /* Basic.playground */,
+			);
+			path = Promise;
 			sourceTree = "<group>";
 		};
 		3CEFBB2B1FA2FF3B0046E9BB /* StoryBoard */ = {
