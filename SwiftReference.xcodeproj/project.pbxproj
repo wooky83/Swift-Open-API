@@ -73,6 +73,7 @@
 		3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionVC.swift; sourceTree = "<group>"; };
 		3C89EAD121DEEE55000B5433 /* Ex_RxSwiftExt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_RxSwiftExt.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C8C439B22261D75000C8A83 /* Ex_PublishSubject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_PublishSubject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C8F67662227735800A711AC /* Ex_BehaviorSubject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_BehaviorSubject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C8FA81821E46A5F00AB5EB7 /* Ex_Share.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Share.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKeyboardVC.swift; sourceTree = "<group>"; };
@@ -244,6 +245,7 @@
 		3C874E3021CB5981009D819D /* Rx_Subjects */ = {
 			isa = PBXGroup;
 			children = (
+				3C8F67662227735800A711AC /* Ex_BehaviorSubject.playground */,
 				3C8C439B22261D75000C8A83 /* Ex_PublishSubject.playground */,
 			);
 			path = Rx_Subjects;
