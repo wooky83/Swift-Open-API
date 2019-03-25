@@ -84,9 +84,11 @@
 		3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-Prefix.swift"; sourceTree = "<group>"; };
 		3CAE474C21FEF62C0017CD02 /* Basic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Basic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3CAE474D21FEF9320017CD02 /* When.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = When.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3CE788C4224890630081BF06 /* Guarantee.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Guarantee.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3CEFBB2E1FA300940046E9BB /* CSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
 		3CF3EE9D203A9F2E00A417DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		3CFC53EF2244B7E300CAF69D /* Async.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Async.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4919C9F8FAEA2F6F49CFF284 /* Pods-SwiftReference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReference.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference.debug.xcconfig"; sourceTree = "<group>"; };
 		87EEFF566A4CE3E6BFFE4E89 /* Pods_SwiftReferenceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReferenceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3F731DA2131E79BD26B3CF /* Pods_SwiftReference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +272,8 @@
 		3CAE474B21FEF5E50017CD02 /* Promise */ = {
 			isa = PBXGroup;
 			children = (
+				3CE788C4224890630081BF06 /* Guarantee.playground */,
+				3CFC53EF2244B7E300CAF69D /* Async.playground */,
 				3CAE474D21FEF9320017CD02 /* When.playground */,
 				3CAE474C21FEF62C0017CD02 /* Basic.playground */,
 			);

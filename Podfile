@@ -11,7 +11,7 @@ target 'SwiftReference' do
     pod 'RxDataSources', '~> 3.1.0'
     pod 'RxSwiftExt'
     pod 'RxOptional'
-    pod 'PromiseKit', '~> 6.7.1'
+    pod 'PromiseKit', '~> 6.8.3'
     pod 'RxKeyboard', '~> 0.9.0'
 
 
