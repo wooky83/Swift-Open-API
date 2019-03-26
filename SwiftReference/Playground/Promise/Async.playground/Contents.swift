@@ -16,7 +16,6 @@ func method() -> Promise<Bool> {
     print("method")
     return Promise { seal in
         delay(1) {
-            
             method1()
                 .pipe(to: {
                     seal.resolve($0)

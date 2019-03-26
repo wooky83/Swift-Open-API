@@ -13,6 +13,7 @@ import RxDataSources
 
 class MainVC: UIViewController {
     
+    public private(set) var test: String?
     private var subjects: Variable<[(title: String, identity: String)]> = Variable([
         ("UIButton, UITextField", "\(BtnTxtFieldVC.self)"),
         ("UISearchBar", "\(SearchVC.self)"),
@@ -26,7 +27,7 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupObservable()   
+        setupObservable()
     }
     
     private func setupObservable() {
