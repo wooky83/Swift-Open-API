@@ -78,6 +78,7 @@
 		3C8F67682227A5B900A711AC /* Ex_BehaviorRelay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_BehaviorRelay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C8F67692227A5BA00A711AC /* Ex_Variable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Variable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C8FA81821E46A5F00AB5EB7 /* Ex_Share.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Share.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C922B5A224B159C00133AE8 /* Ex_ObserveOn_SubscribeOn.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_ObserveOn_SubscribeOn.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C92DA4F202C3F4E001D0B1F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3C949298222CEA4100946F93 /* Ex_FlatMap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_FlatMap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxKeyboardVC.swift; sourceTree = "<group>"; };
@@ -237,6 +238,7 @@
 		3C874E2F21CB596B009D819D /* Rx_Operator */ = {
 			isa = PBXGroup;
 			children = (
+				3C922B5A224B159C00133AE8 /* Ex_ObserveOn_SubscribeOn.playground */,
 				3C949298222CEA4100946F93 /* Ex_FlatMap.playground */,
 				3C86945B22004837004D0E7F /* Ex_Async.playground */,
 				3C8FA81821E46A5F00AB5EB7 /* Ex_Share.playground */,

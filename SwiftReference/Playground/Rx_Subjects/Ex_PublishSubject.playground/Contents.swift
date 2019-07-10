@@ -34,4 +34,19 @@ do {
     
 }
 
+do {
+    let publishSubject = PublishSubject<String?>()
+    
+    publishSubject.onNext("hi")
+    
+    publishSubject.subscribe(onNext: {
+        print("pub1 : \($0)")
+    })
+    
+    publishSubject.onNext("Good")
+    publishSubject.onNext(nil)
+    publishSubject.onNext("game")
+    
+}
+
 
