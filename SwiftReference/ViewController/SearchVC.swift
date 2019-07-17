@@ -29,7 +29,7 @@ class SearchVC: UIViewController {
             .filter { query in
                 return query.count > 2
             }
-            .debounce(0.5, scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(5), scheduler: MainScheduler.instance)
             .map { query in
                 var urlComponents = URLComponents(string: "https://itunes.apple.com/search?media=music&entity=song")
                 let queryItem = URLQueryItem(name: "term", value: query)

@@ -23,7 +23,7 @@ do {
     
     bounce
         .asObservable()
-        .debounce(1, scheduler: MainScheduler.instance)
+        .debounce(.milliseconds(3000), scheduler: MainScheduler.instance)
         .subscribe(onNext: { value in
             print(Date())
             print(value)
