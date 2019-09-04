@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxSwiftExt
+import RxCocoa
 
 class TTTAttributedLabelVC: UIViewController {
 
@@ -30,6 +31,16 @@ class TTTAttributedLabelVC: UIViewController {
                 UIApplication.shared.open($0, options: [:], completionHandler: nil)
             })
             .disposed(by: rx.disposeBag)
+        
+        let custom = CustomClass()
+        custom.rx
+            .willStart
+            .subscribe(onNext: {
+                print("Here is \($0)")
+            })
+            .disposed(by: rx.disposeBag)
+        custom.start()
+        
     }
     
 
@@ -43,4 +54,44 @@ class TTTAttributedLabelVC: UIViewController {
     }
     */
 
+}
+
+@objc protocol CustomClassDelegate: class {
+    @objc optional func willStart(str: String)
+}
+
+class CustomClass: NSObject {
+    weak var gg: CustomClassDelegate? = nil
+    func start() {
+        self.gg?.willStart?(str: "Good Luck to you!!")
+    }
+}
+
+class RxCustomDelegateProxy: DelegateProxy<CustomClass, CustomClassDelegate>, DelegateProxyType, CustomClassDelegate {
+    static func registerKnownImplementations() {
+        self.register { (TT) -> RxCustomDelegateProxy in
+            RxCustomDelegateProxy.init(parentObject: TT, delegateProxy: self)
+        }
+    }
+    
+    static func currentDelegate(for object: CustomClass) -> CustomClassDelegate? {
+        return object.gg
+    }
+    
+    static func setCurrentDelegate(_ delegate: CustomClassDelegate?, to object: CustomClass) {
+        object.gg = delegate
+    }
+}
+
+extension Reactive where Base: CustomClass{
+    var delegate : DelegateProxy<CustomClass, CustomClassDelegate>{
+        return RxCustomDelegateProxy.proxy(for:self.base)
+    }
+    
+    var willStart: Observable<String> {
+        return delegate.methodInvoked(#selector(CustomClassDelegate.willStart(str:)))
+            .compactMap {
+                return $0[0] as? String
+            }
+    }
 }
