@@ -14,12 +14,13 @@ import RxDataSources
 class MainVC: UIViewController {
     
     public private(set) var test: String?
-    private var subjects: Variable<[(title: String, identity: String)]> = Variable([
+    private var subjects: BehaviorRelay<[(title: String, identity: String)]> = BehaviorRelay(value: [
         ("UIButton, UITextField", "\(BtnTxtFieldVC.self)"),
         ("UISearchBar", "\(SearchVC.self)"),
         ("UITableView+RxDataSource", "\(TableViewDataSourceVC.self)"),
         ("Simple+UICollectionView", "\(SimpleCollectionVC.self)"),
-        ("RxKeyboard", "\(RxKeyboardVC.self)")
+        ("RxKeyboard", "\(RxKeyboardVC.self)"),
+        ("RxTTTAttributedLabel", "\(TTTAttributedLabelVC.self)")
     ])
     
     

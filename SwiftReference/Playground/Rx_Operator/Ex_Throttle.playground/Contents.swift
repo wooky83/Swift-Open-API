@@ -18,7 +18,7 @@ do {
     
     th
         .asObservable()
-        .throttle(1, latest: false, scheduler: MainScheduler.instance)
+        .throttle(RxTimeInterval.seconds(1), latest: false, scheduler: MainScheduler.instance)
         .subscribe(onNext: { value in
             print(value)
         })
@@ -44,7 +44,7 @@ do {
     
     th
         .asObservable()
-        .throttle(1, latest: true, scheduler: MainScheduler.instance)
+        .throttle(RxTimeInterval.seconds(1), latest: true, scheduler: MainScheduler.instance)
         .subscribe(onNext: { value in
             print(value)
         })

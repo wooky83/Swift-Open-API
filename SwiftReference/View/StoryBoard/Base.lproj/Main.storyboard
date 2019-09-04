@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nr3-Pw-Rxd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nr3-Pw-Rxd">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -323,6 +323,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnB-ud-9fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="798.76847290640399"/>
+        </scene>
+        <!--Attributed LabelVC-->
+        <scene sceneID="tRq-0p-V7z">
+            <objects>
+                <viewController storyboardIdentifier="TTTAttributedLabelVC" id="aIG-mV-ACv" customClass="TTTAttributedLabelVC" customModule="SwiftReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zVd-94-IRO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ELh-gp-ePq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iQ1-4d-MDo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04T-dO-sqT" customClass="TTTAttributedLabel">
+                                <rect key="frame" x="16" y="153" width="343" height="191"/>
+                                <string key="text">다음으로 코치진 전면 개편이 필요하다. 롯데 코치진은 학연과 지연에 얽매여 철밥통 인사들로 구성돼 있다. 능력 검증도 없었다. 일부 코치들의 경우 부적합 인사로 팬들의 비난을 받기도 했다. 2군 코치는 육성 능력, 1군 코치는 상황 판단을 갖춘 인물들로 전면 재구성해야 한다.
+
+선수단 구성이 성 단장의 최대 주요 임무다. 적극적인 소통을 바탕으로 잠재력 있는 우수 선수 스카우트, 과학적 선수 육성, 데이터 기반의 선수단 운영을 제시한 바 있다.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineSpacing">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="04T-dO-sqT" firstAttribute="leading" secondItem="iQ1-4d-MDo" secondAttribute="leadingMargin" id="Jwr-S1-LU5"/>
+                            <constraint firstItem="04T-dO-sqT" firstAttribute="top" secondItem="zVd-94-IRO" secondAttribute="bottom" constant="109" id="XJi-h0-hhp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="04T-dO-sqT" secondAttribute="trailing" id="Zhb-n5-KDa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="attributedLb" destination="04T-dO-sqT" id="PBy-bG-rSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2V-Ff-gRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="1448.2758620689656"/>
         </scene>
     </scenes>
 </document>

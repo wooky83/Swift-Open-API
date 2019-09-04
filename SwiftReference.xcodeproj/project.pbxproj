@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C375F3B231F800D0036E817 /* TTTAttributedLabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C375F3A231F800D0036E817 /* TTTAttributedLabelVC.swift */; };
+		3C375F40231F80EE0036E817 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C375F3E231F80ED0036E817 /* TTTAttributedLabel.m */; };
+		3C375F42231F838D0036E817 /* TTTAttributedLabel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C375F41231F838D0036E817 /* TTTAttributedLabel+Rx.swift */; };
 		3C409E5F1F97275700159D84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C409E5E1F97275700159D84 /* AppDelegate.swift */; };
 		3C409E611F97275700159D84 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C409E601F97275700159D84 /* MainVC.swift */; };
 		3C409E661F97275700159D84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C409E641F97275700159D84 /* Main.storyboard */; };
@@ -48,6 +51,11 @@
 /* Begin PBXFileReference section */
 		2803F31D2C9105500E7C858D /* Pods-SwiftReference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReference.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference.release.xcconfig"; sourceTree = "<group>"; };
 		2DAE798A39506C26C5EE8957 /* Pods_SwiftReferenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReferenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C375F3A231F800D0036E817 /* TTTAttributedLabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTAttributedLabelVC.swift; sourceTree = "<group>"; };
+		3C375F3D231F80ED0036E817 /* SwiftReference-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftReference-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C375F3E231F80ED0036E817 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		3C375F3F231F80ED0036E817 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		3C375F41231F838D0036E817 /* TTTAttributedLabel+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TTTAttributedLabel+Rx.swift"; sourceTree = "<group>"; };
 		3C409E5B1F97275700159D84 /* SwiftReference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftReference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C409E5E1F97275700159D84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C409E601F97275700159D84 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 				3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */,
 				3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */,
 				3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */,
+				3C375F3A231F800D0036E817 /* TTTAttributedLabelVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 				3CA7C6651F98425C005BA15E /* Swift-Prefix.swift */,
 				3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */,
 				3C92DA4F202C3F4E001D0B1F /* Utility.swift */,
+				3C375F41231F838D0036E817 /* TTTAttributedLabel+Rx.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -167,6 +177,15 @@
 				3CEFBB2B1FA2FF3B0046E9BB /* StoryBoard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3C375F3C231F80CD0036E817 /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+				3C375F3F231F80ED0036E817 /* TTTAttributedLabel.h */,
+				3C375F3E231F80ED0036E817 /* TTTAttributedLabel.m */,
+			);
+			path = OpenSource;
 			sourceTree = "<group>";
 		};
 		3C409E521F97275700159D84 = {
@@ -195,12 +214,14 @@
 			isa = PBXGroup;
 			children = (
 				3C874E2D21CB3543009D819D /* Playground */,
+				3C375F3C231F80CD0036E817 /* OpenSource */,
 				3C0629FE202D3E9F00D06FA1 /* Network */,
 				3C0A8D411F9DC774001E98BA /* ViewController */,
 				3C0A8D421F9DC77E001E98BA /* Model */,
 				3C0A8D441F9DC7D1001E98BA /* View */,
 				3C0A8D431F9DC787001E98BA /* Utility */,
 				3C409E5E1F97275700159D84 /* AppDelegate.swift */,
+				3C375F3D231F80ED0036E817 /* SwiftReference-Bridging-Header.h */,
 				3C409E671F97275700159D84 /* Assets.xcassets */,
 				3CF3EE9D203A9F2E00A417DB /* README.md */,
 				3C409E6C1F97275700159D84 /* Info.plist */,
@@ -382,6 +403,7 @@
 				TargetAttributes = {
 					3C409E5A1F97275700159D84 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					3C409E701F97275700159D84 = {
@@ -511,7 +533,10 @@
 				3C82EFFF1F9DD37400B34528 /* SearchVC.swift in Sources */,
 				3C82F0011F9DDC9C00B34528 /* BtnTxtFieldVC.swift in Sources */,
 				3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */,
+				3C375F42231F838D0036E817 /* TTTAttributedLabel+Rx.swift in Sources */,
+				3C375F40231F80EE0036E817 /* TTTAttributedLabel.m in Sources */,
 				3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */,
+				3C375F3B231F800D0036E817 /* TTTAttributedLabelVC.swift in Sources */,
 				3C92DA50202C3F4E001D0B1F /* Utility.swift in Sources */,
 				3C95CC2F21FECA6900A3E699 /* RxKeyboardVC.swift in Sources */,
 				3C874E3221CB69A7009D819D /* TableViewDataSourceVC.swift in Sources */,
@@ -690,6 +715,7 @@
 			baseConfigurationReference = 4919C9F8FAEA2F6F49CFF284 /* Pods-SwiftReference.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -698,6 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftReference/SwiftReference-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -708,6 +735,7 @@
 			baseConfigurationReference = 2803F31D2C9105500E7C858D /* Pods-SwiftReference.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftReference/Info.plist;
@@ -715,6 +743,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftReference/SwiftReference-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
