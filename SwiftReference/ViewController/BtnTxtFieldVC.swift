@@ -45,7 +45,7 @@ class BtnTxtFieldVC: UIViewController {
         }.disposed(by: disposeBag)
         
         
-        joinBtn.rx.tap.throttle(0.3, latest: false, scheduler: MainScheduler.instance).subscribe { _ in
+        joinBtn.rx.tap.throttle(RxTimeInterval.milliseconds(300), latest: false, scheduler: MainScheduler.instance).subscribe { _ in
             self.showAlert()
         }.disposed(by: disposeBag)
     }

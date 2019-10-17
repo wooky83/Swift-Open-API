@@ -130,13 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C0629FE202D3E9F00D06FA1 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		3C0A8D411F9DC774001E98BA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +208,6 @@
 			children = (
 				3C874E2D21CB3543009D819D /* Playground */,
 				3C375F3C231F80CD0036E817 /* OpenSource */,
-				3C0629FE202D3E9F00D06FA1 /* Network */,
 				3C0A8D411F9DC774001E98BA /* ViewController */,
 				3C0A8D421F9DC77E001E98BA /* Model */,
 				3C0A8D441F9DC7D1001E98BA /* View */,
@@ -408,11 +400,13 @@
 					};
 					3C409E701F97275700159D84 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3C409E5A1F97275700159D84;
 					};
 					3C409E7B1F97275700159D84 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3C409E5A1F97275700159D84;
 					};
@@ -759,7 +753,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftReference.app/SwiftReference";
 			};
@@ -775,7 +769,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftReference.app/SwiftReference";
 			};
@@ -790,7 +784,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftReference;
 			};
@@ -805,7 +799,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftReference;
 			};

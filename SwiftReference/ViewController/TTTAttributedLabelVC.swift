@@ -61,9 +61,9 @@ class TTTAttributedLabelVC: UIViewController {
 }
 
 class CustomClass: NSObject {
-    weak var gg: CustomClassDelegate? = nil
+    weak var csDelegate: CustomClassDelegate? = nil
     func start() {
-        self.gg?.willStart?(str: "Good Luck to you!!")
+        self.csDelegate?.willStart?(str: "Good Luck to you!!")
     }
 }
 
@@ -75,11 +75,11 @@ class RxCustomDelegateProxy: DelegateProxy<CustomClass, CustomClassDelegate>, De
     }
     
     static func currentDelegate(for object: CustomClass) -> CustomClassDelegate? {
-        return object.gg
+        return object.csDelegate
     }
     
     static func setCurrentDelegate(_ delegate: CustomClassDelegate?, to object: CustomClass) {
-        object.gg = delegate
+        object.csDelegate = delegate
     }
 }
 
