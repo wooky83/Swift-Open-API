@@ -51,6 +51,8 @@
 /* Begin PBXFileReference section */
 		2803F31D2C9105500E7C858D /* Pods-SwiftReference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReference.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference.release.xcconfig"; sourceTree = "<group>"; };
 		2DAE798A39506C26C5EE8957 /* Pods_SwiftReferenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReferenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C05775123F65A6F004491EE /* Ex_PublishRelay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_PublishRelay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C05775223F65B62004491EE /* Ex_BufferWithTrigger.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_BufferWithTrigger.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C375F3A231F800D0036E817 /* TTTAttributedLabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTAttributedLabelVC.swift; sourceTree = "<group>"; };
 		3C375F3D231F80ED0036E817 /* SwiftReference-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftReference-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C375F3E231F80ED0036E817 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		3C409E801F97275700159D84 /* SwiftReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReferenceUITests.swift; sourceTree = "<group>"; };
 		3C409E821F97275700159D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C57A43121D5F89600C8579E /* Ex_Sample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Sample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C68C77E23F661E5007B293C /* Pipe.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Pipe.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C82EFFE1F9DD37400B34528 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		3C82F0001F9DDC9C00B34528 /* BtnTxtFieldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnTxtFieldVC.swift; sourceTree = "<group>"; };
 		3C85BB6421DC810900F9AD4C /* Ex_Combinelatest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Combinelatest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -144,13 +147,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3C0A8D421F9DC77E001E98BA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3C0A8D431F9DC787001E98BA /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +205,6 @@
 				3C874E2D21CB3543009D819D /* Playground */,
 				3C375F3C231F80CD0036E817 /* OpenSource */,
 				3C0A8D411F9DC774001E98BA /* ViewController */,
-				3C0A8D421F9DC77E001E98BA /* Model */,
 				3C0A8D441F9DC7D1001E98BA /* View */,
 				3C0A8D431F9DC787001E98BA /* Utility */,
 				3C409E5E1F97275700159D84 /* AppDelegate.swift */,
@@ -252,6 +247,7 @@
 		3C874E2F21CB596B009D819D /* Rx_Operator */ = {
 			isa = PBXGroup;
 			children = (
+				3C05775223F65B62004491EE /* Ex_BufferWithTrigger.playground */,
 				3CF88E8422DEB85600EEC6E5 /* Ex_ObserveOn_SubscribeOn.playground */,
 				3C949298222CEA4100946F93 /* Ex_FlatMap.playground */,
 				3C86945B22004837004D0E7F /* Ex_Async.playground */,
@@ -268,6 +264,7 @@
 		3C874E3021CB5981009D819D /* Rx_Subjects */ = {
 			isa = PBXGroup;
 			children = (
+				3C05775123F65A6F004491EE /* Ex_PublishRelay.playground */,
 				3C8F67682227A5B900A711AC /* Ex_BehaviorRelay.playground */,
 				3C8F67692227A5BA00A711AC /* Ex_Variable.playground */,
 				3C8F676722277B0900A711AC /* Ex_ReplaySubject.playground */,
@@ -288,6 +285,7 @@
 		3CAE474B21FEF5E50017CD02 /* Promise */ = {
 			isa = PBXGroup;
 			children = (
+				3C68C77E23F661E5007B293C /* Pipe.playground */,
 				3CF88E8522DEBEC700EEC6E5 /* Pending.playground */,
 				3CE788C4224890630081BF06 /* Guarantee.playground */,
 				3CFC53EF2244B7E300CAF69D /* Async.playground */,

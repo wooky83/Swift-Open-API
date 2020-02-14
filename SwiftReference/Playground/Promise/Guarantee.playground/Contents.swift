@@ -13,11 +13,21 @@ func af(_ second: Int) -> Guarantee<Int> {
     }
 }
 
+func newGuaranteeInit(_ second: Int) -> Guarantee<Int> {
+    Guarantee.value(second + 1)
+}
+
 firstly {
     af(3)
 }
 .get {
-    print("get is \($0)")
+    print("(1) get is : \($0)")
+}
+.then {
+    newGuaranteeInit($0)
+}
+.get {
+    print("(2) get is \($0)")
 }
 .done {
     print("done is \($0)")
