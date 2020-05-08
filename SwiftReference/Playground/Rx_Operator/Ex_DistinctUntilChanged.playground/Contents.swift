@@ -29,6 +29,20 @@ do {
     relay.accept(2)
     relay.accept(4)
     relay.accept(5)
+    
+    let csRelay = PublishRelay<String>()
+      csRelay
+          .distinctUntilChanged { $0 == $1 }
+          .subscribe(onNext: { value in
+              print(value)
+          })
+          .disposed(by: disposeBag)
+      
+      csRelay.accept("a")
+      csRelay.accept("a")
+      csRelay.accept("c")
+      csRelay.accept("a")
+      csRelay.accept("e")
 }
 
 PlaygroundPage.current.needsIndefiniteExecution = true
