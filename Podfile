@@ -6,8 +6,8 @@ target 'SwiftReference' do
   use_frameworks!
 
   # Pods for SwiftReference
-    pod 'RxSwift', '~> 5.0.0'
-    pod 'RxCocoa', '~> 5.0.0'
+    pod 'RxSwift', '~> 5.1.1'
+    pod 'RxCocoa', '~> 5.1.1'
     pod 'RxDataSources', '~> 4.0.1'
     pod 'RxSwiftExt', '~> 5.0.0'
     pod 'RxOptional', '~> 4.0.0'
