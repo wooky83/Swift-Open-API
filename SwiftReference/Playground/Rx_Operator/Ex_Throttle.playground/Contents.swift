@@ -57,4 +57,30 @@ do {
     th.onNext(5)
 }
 
+
+/*
+ ------(1)-(2)-(3)----
+ throttle(time, true)
+ ------(1)-----(3)----
+ */
+print("Throttle default")
+
+do {
+    let th = PublishSubject<Int>()
+    
+    th
+        .asObservable()
+        .throttle(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
+        .subscribe(onNext: { value in
+            print(value)
+        })
+        .disposed(by: disposeBag)
+    
+    th.onNext(11)
+    th.onNext(12)
+    th.onNext(13)
+    th.onNext(14)
+    th.onNext(15)
+}
+
 PlaygroundPage.current.needsIndefiniteExecution = true
