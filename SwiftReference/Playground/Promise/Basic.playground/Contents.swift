@@ -8,14 +8,14 @@ enum CSError: Error {
 }
 
 func timeOut1() -> Promise<Bool> {
-    print("timeOUt1")
+    print("timeOut1")
     return Promise { seal in
         seal.fulfill(true)
     }
 }
 
 func timeOut2(_ b: Bool) -> Promise<Int> {
-    print("timeOUt2")
+    print("timeOut2")
     return Promise { seal in
         if (Int.random(in: 1..<10) % 2) == 0 {
             seal.fulfill(7)
@@ -25,12 +25,17 @@ func timeOut2(_ b: Bool) -> Promise<Int> {
     }
 }
 
+func typeChange(name: Int) -> String {
+    "Good Luck! \(name)"
+}
+
 firstly {
     timeOut1()
 }
 .then {
     timeOut2($0)
 }
+.map(typeChange)
 .done { value in
     print(value)
 }
