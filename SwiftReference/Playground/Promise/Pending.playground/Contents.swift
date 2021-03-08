@@ -14,6 +14,13 @@ class Pending: NSObject {
         return promise
     }
     
+    func getGuarantee() -> Guarantee<Int> {
+        return Guarantee { sl in
+            after(seconds: 3).done {
+                sl(8)
+            }
+        }
+    }
 }
 
 let test = Pending()
@@ -24,3 +31,14 @@ firstly {
 .done {
     print("done is \($0)")
 }
+
+let result1 = test.getGuarantee().value
+print(result1 ?? "nil")
+
+print(Thread.current)
+DispatchQueue.global().async {
+    print(Thread.current)
+    let result2 = test.getGuarantee().wait()
+    print(result2)
+}
+

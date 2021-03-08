@@ -8,11 +8,12 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class SimpleCollectionVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    private let model = Variable<[String]>([
+    private let model = BehaviorRelay<[String]>(value: [
         "good",
         "luck",
         "to",

@@ -1,72 +1,71 @@
 PODS:
-  - Differentiator (4.0.1)
-  - PromiseKit (6.10.0):
-    - PromiseKit/CorePromise (= 6.10.0)
-    - PromiseKit/Foundation (= 6.10.0)
-    - PromiseKit/UIKit (= 6.10.0)
-  - PromiseKit/CorePromise (6.10.0)
-  - PromiseKit/Foundation (6.10.0):
+  - Differentiator (5.0.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.10.0):
+  - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxKeyboard (1.0.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxOptional (4.0.0):
-    - RxCocoa (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - RxSwiftExt (5.0.0):
-    - RxSwiftExt/Core (= 5.0.0)
-    - RxSwiftExt/RxCocoa (= 5.0.0)
-  - RxSwiftExt/Core (5.0.0):
-    - RxSwift (~> 5.0)
-  - RxSwiftExt/RxCocoa (5.0.0):
-    - RxCocoa (~> 5.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxKeyboard (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxOptional (5.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
     - RxSwiftExt/Core
 
 DEPENDENCIES:
-  - PromiseKit (~> 6.10.0)
-  - RxCocoa (~> 5.1.1)
-  - RxDataSources (~> 4.0.1)
-  - RxKeyboard (~> 1.0.0)
-  - RxOptional (~> 4.0.0)
-  - RxSwift (~> 5.1.1)
-  - RxSwiftExt (~> 5.0.0)
+  - PromiseKit (~> 6.13.1)
+  - RxCocoa (~> 6.1.0)
+  - RxDataSources (~> 5.0.0)
+  - RxKeyboard (~> 2.0.0)
+  - RxOptional (~> 5.0.1)
+  - RxSwift (~> 6.1.0)
+  - RxSwiftExt (~> 6.0.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Differentiator
     - PromiseKit
+    - RxCocoa
     - RxDataSources
     - RxKeyboard
     - RxOptional
-    - RxSwiftExt
-  trunk:
-    - RxCocoa
     - RxRelay
     - RxSwift
+    - RxSwiftExt
 
 SPEC CHECKSUMS:
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
-  RxOptional: 9904e2219d59260c3c171273d475b2126de187e8
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  RxSwiftExt: 4564187392cc53823ef241fa4a11647861567026
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
+  RxOptional: e0b39f0863c25c4bfeea83cb35102a5244d048b3
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
 
-PODFILE CHECKSUM: 5d76712ac2fef180e48d9cceab65cf36dd124bcb
+PODFILE CHECKSUM: 1f661c6dccbb8959607f2bda6cb3c16a38f1e958
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.10.1
