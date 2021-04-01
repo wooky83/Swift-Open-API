@@ -32,19 +32,24 @@ class MainVC: UIViewController {
     }
     
     private func setupObservable() {
-        mainTableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-            guard let `self` = self else {return}
-            self.mainTableView.deselectRow(at: indexPath, animated: true)
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: self.subjects.value[indexPath.row].identity)
-            vc.title = self.subjects.value[indexPath.row].title
-            self.navigationController?.pushViewController(vc, animated: true)
-        }).disposed(by: rx.disposeBag)
+        mainTableView
+            .rx
+            .itemSelected
+            .withUnretained(self)
+            .subscribe(onNext: { owner, indexPath in
+                owner.mainTableView.deselectRow(at: indexPath, animated: true)
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: owner.subjects.value[indexPath.row].identity)
+                vc.title = owner.subjects.value[indexPath.row].title
+                owner.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: rx.disposeBag)
         
-        self.subjects.asObservable().bind(to: self.mainTableView.rx.items) { tableView, row, data in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(CSCell.self)")!
-            cell.textLabel?.text = data.title
-            return cell
-        }.disposed(by: rx.disposeBag)
+        self.subjects
+            .asDriver()
+            .drive(self.mainTableView.rx.items) { tableView, row, data in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "\(CSCell.self)")!
+                cell.textLabel?.text = data.title
+                return cell
+            }.disposed(by: rx.disposeBag)
     }
     
 }

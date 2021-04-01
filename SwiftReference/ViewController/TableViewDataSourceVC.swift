@@ -44,7 +44,7 @@ class TableViewDataSourceVC: UIViewController {
     
     private func setupObservable() {
         mainTableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-            guard let `self` = self else {return}
+            guard let self = self else { return }
             self.mainTableView.deselectRow(at: indexPath, animated: true)
         }).disposed(by: rx.disposeBag)
         

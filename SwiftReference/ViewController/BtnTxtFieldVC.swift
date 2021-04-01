@@ -17,8 +17,6 @@ class BtnTxtFieldVC: UIViewController {
     @IBOutlet weak var joinBtn: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
-    private let disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,22 +30,26 @@ class BtnTxtFieldVC: UIViewController {
         
         Observable.combineLatest(idObs, pwObs) {($0, $1)}.subscribe {
             switch $0 {
-            case .next(true, true):
+            case .next((true, true)):
                 self.resultLabel.text = "good!"
-            case .next(true, _):
+            case .next((true, _)):
                 self.resultLabel.text = "password plz!"
-            case .next(_, true):
+            case .next((_, true)):
                 self.resultLabel.text = "id plz!"
-            case .next(_, _):
+            case .next((_, _)):
                 self.resultLabel.text = "id and password plz!"
             default:()
             }
-        }.disposed(by: disposeBag)
+        }.disposed(by: rx.disposeBag)
         
         
-        joinBtn.rx.tap.throttle(RxTimeInterval.milliseconds(300), latest: false, scheduler: MainScheduler.instance).subscribe { _ in
-            self.showAlert()
-        }.disposed(by: disposeBag)
+        joinBtn.rx
+            .tap
+            .throttle(RxTimeInterval.milliseconds(300), latest: false, scheduler: MainScheduler.instance)
+            .subscribe { _ in
+                self.showAlert()
+            }
+            .disposed(by: rx.disposeBag)
     }
     
     private func showAlert() {

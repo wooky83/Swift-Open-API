@@ -12,14 +12,14 @@ print("Custom Sample")
  ------(1)-(2)-------(3)--------(4)------   //Value
  --------------(*)-----------------------   //Trigger
  Custom Sample(time)
- --------------(2)---(3)--------(4)-
+ --------------(2)---(3)--------(4)------
  */
 
 do {
     let tip = BehaviorSubject<String?>(value: nil)
     let trigger = PublishSubject<Void>()
 
-    Observable.merge(tip.sample(trigger).take(1), tip.skipUntil(trigger))
+    Observable.merge(tip.sample(trigger).take(1), tip.skip(until: trigger))
         .filterNil()
         .subscribe(onNext: {
             print("Good Luck : \($0)")

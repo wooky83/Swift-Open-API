@@ -71,6 +71,9 @@
 		3C409E801F97275700159D84 /* SwiftReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReferenceUITests.swift; sourceTree = "<group>"; };
 		3C409E821F97275700159D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C57A43121D5F89600C8579E /* Ex_Sample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Sample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C662EE42615A3F60049BF04 /* Ex_Completable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Completable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C662EE52615A3F60049BF04 /* Ex_Maybe.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Maybe.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C662EE62615A3F60049BF04 /* Ex_Single.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Single.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C68C77E23F661E5007B293C /* Pipe.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Pipe.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C6A72A4242DC79600F9E21E /* Ex_DistinctUntilChanged.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_DistinctUntilChanged.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C82EFFE1F9DD37400B34528 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
@@ -135,6 +138,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0846582614222300FD70B4 /* Rx_traits */ = {
+			isa = PBXGroup;
+			children = (
+				3C662EE62615A3F60049BF04 /* Ex_Single.playground */,
+				3C662EE42615A3F60049BF04 /* Ex_Completable.playground */,
+				3C662EE52615A3F60049BF04 /* Ex_Maybe.playground */,
+			);
+			path = Rx_traits;
+			sourceTree = "<group>";
+		};
 		3C0A8D411F9DC774001E98BA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				3CAE474B21FEF5E50017CD02 /* Promise */,
+				3C0846582614222300FD70B4 /* Rx_traits */,
 				3C874E3021CB5981009D819D /* Rx_Subjects */,
 				3C874E2F21CB596B009D819D /* Rx_Operator */,
 			);
