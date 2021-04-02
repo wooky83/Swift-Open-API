@@ -35,10 +35,24 @@ do {
     wook.score.accept(60)
 }
 
+print("----------------------------")
+
 do {
     
-    let behavior = BehaviorRelay(value: 99)
+    let behavior = BehaviorRelay(value: 1)
+    let fHavior = BehaviorRelay(value: 2)
     
+    behavior
+        .flatMap { _ in
+            fHavior
+        }
+        .subscribe(onNext: {
+            print($0)
+        })
+    
+    behavior.accept(20)
+    behavior.accept(3)
+    fHavior.accept(7)
  
 }
 
