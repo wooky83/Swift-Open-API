@@ -15,7 +15,7 @@ print("Behavior Subject")
 
 do {
     let behaviorSubject = BehaviorSubject(value: "goodluck")
-    
+
     behaviorSubject.subscribe(onNext: {
         print("pub1 : \($0)")
     })
