@@ -72,6 +72,8 @@
 		3C409E801F97275700159D84 /* SwiftReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReferenceUITests.swift; sourceTree = "<group>"; };
 		3C409E821F97275700159D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C57A43121D5F89600C8579E /* Ex_Sample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Sample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C657A792623DAA0002D4C4B /* Ex_Signal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Signal.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C657A832623DF89002D4C4B /* Ex_ Infallible.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Ex_ Infallible.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C662EE42615A3F60049BF04 /* Ex_Completable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Completable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C662EE52615A3F60049BF04 /* Ex_Maybe.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Maybe.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C662EE62615A3F60049BF04 /* Ex_Single.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ex_Single.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -144,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				3C662EE62615A3F60049BF04 /* Ex_Single.playground */,
+				3C657A832623DF89002D4C4B /* Ex_ Infallible.playground */,
+				3C657A792623DAA0002D4C4B /* Ex_Signal.playground */,
 				3C662EE42615A3F60049BF04 /* Ex_Completable.playground */,
 				3C662EE52615A3F60049BF04 /* Ex_Maybe.playground */,
 				3C02AB75261D849200511461 /* Ex_Drive.playground */,
