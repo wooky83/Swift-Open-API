@@ -38,7 +38,7 @@ class SearchVC: UIViewController {
             }
             .flatMapLatest { request in
                 return URLSession.shared.rx.json(request: request)
-                    .catchErrorJustReturn([])
+                    .catchAndReturn([])
             }
             .map { json -> [[String: Any]] in
                 guard let json = json as? [String: Any], let items = json["results"] as? [[String: Any]] else  {
