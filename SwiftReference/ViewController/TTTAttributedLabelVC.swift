@@ -56,7 +56,7 @@ class TTTAttributedLabelVC: UIViewController {
 
 }
 
-@objc protocol CustomClassDelegate: class {
+@objc protocol CustomClassDelegate: AnyObject {
     @objc optional func willStart(str: String)
 }
 
