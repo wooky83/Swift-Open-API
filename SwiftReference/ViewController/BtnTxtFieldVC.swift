@@ -56,6 +56,11 @@ class BtnTxtFieldVC: UIViewController {
             })
             .disposed(by: rx.disposeBag)
         
+        self.rx.observe(CGRect.self, #keyPath(UIView.bounds))
+            .subscribe(onNext: {
+                print("bounds is \(String(describing: $0))")
+            })
+            .disposed(by: rx.disposeBag)
     }
     
     private func showAlert() {
