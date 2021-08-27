@@ -34,3 +34,51 @@ func >>=<A, B>(a: A?, f: (A) -> B?) -> B?
 public func delay(_ when: Double, _ block: @escaping ()->()) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(when * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: block)
 }
+
+//String Value operator
+//nil or empty 일 경우 false
+
+postfix operator ⁇
+postfix func ⁇<T: StringProtocol>(lhs: T?) -> Bool {
+    guard let str = lhs else { return false }
+    return !str.trimmingCharacters(in: .whitespaces).isEmpty
+}
+
+postfix func ⁇<T: SignedInteger>(lhs: T?) -> Bool {
+    guard let number = lhs else { return false }
+    return number > 0
+}
+
+postfix func ⁇<T: BinaryFloatingPoint>(lhs: T?) -> Bool {
+    guard let number = lhs else { return false }
+    return number > 0
+}
+
+postfix func ⁇<T: Collection>(lhs: T?) -> Bool {
+    guard let array = lhs else { return false }
+    return !array.isEmpty
+}
+
+postfix operator ‽
+postfix func ‽(lhs: String?) -> String {
+    lhs ?? ""
+}
+
+postfix func ‽(lhs: Bool?) -> Bool {
+    lhs ?? false
+}
+
+postfix func ‽<T: SignedInteger>(lhs: T?) -> T {
+    lhs ?? 0
+}
+
+postfix func ‽<T: Collection>(lhs: T?) -> T {
+    lhs ?? [] as! T
+}
+
+//대소문자 구분없이 비교
+infix operator ≡
+func ≡(lhs: String?, rhs: String?) -> Bool {
+    guard let left = lhs, let right = rhs else { return false }
+    return left.compare(right, options: .caseInsensitive) == .orderedSame
+}

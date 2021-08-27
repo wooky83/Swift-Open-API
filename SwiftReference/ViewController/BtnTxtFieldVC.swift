@@ -25,27 +25,55 @@ class BtnTxtFieldVC: UIViewController {
     
     private func setUpObservable() {
         
+        idTextF.rx
+            .controlEvent([.editingDidBegin, .editingDidEnd])
+            .withUnretained(self)
+            .map { ($0.0, $0.0.idTextF.isEditing) }
+            .subscribe(onNext: { owner, isEditing in
+                print("controlEvent \(isEditing)")
+            })
+            .disposed(by: rx.disposeBag)
+        
+        idTextF.rx
+            .text
+            .distinctUntilChanged()
+            .map { $0⁇ }
+            .subscribe(onNext: {
+                print("rx text is \($0)")
+            })
+            .disposed(by: rx.disposeBag)
+        
+        idTextF.rx
+            .observe(\.text)
+            .withUnretained(self)
+            .subscribe(onNext: { owner, field in
+                print("rx text Observe is \(String(describing: field))")
+            })
+            .disposed(by: rx.disposeBag)
+        
         let idObs = idTextF.rx.text.asObservable().map{!(($0?.isEmpty)!)}
         let pwObs = passwordTextF.rx.text.asObservable().map{!(($0?.isEmpty)!)}
         
-        Observable.combineLatest(idObs, pwObs) {($0, $1)}.subscribe {
-            switch $0 {
-            case .next((true, true)):
-                self.resultLabel.text = "good!"
-            case .next((true, _)):
-                self.resultLabel.text = "password plz!"
-            case .next((_, true)):
-                self.resultLabel.text = "id plz!"
-            case .next((_, _)):
-                self.resultLabel.text = "id and password plz!"
-            default:()
+        Observable.combineLatest(idObs, pwObs) {($0, $1)}
+            .subscribe {
+                switch $0 {
+                case .next((true, true)):
+                    self.resultLabel.text = "good!"
+                case .next((true, _)):
+                    self.resultLabel.text = "password plz!"
+                case .next((_, true)):
+                    self.resultLabel.text = "id plz!"
+                case .next((_, _)):
+                    self.resultLabel.text = "id and password plz!"
+                default:()
+                }
             }
-        }.disposed(by: rx.disposeBag)
+            .disposed(by: rx.disposeBag)
         
         
         joinBtn.rx
             .tap
-            .throttle(RxTimeInterval.milliseconds(300), latest: false, scheduler: MainScheduler.instance)
+            .throttle(.milliseconds(300), latest: false, scheduler: MainScheduler.instance)
             .subscribe { _ in
                 self.showAlert()
             }
@@ -66,4 +94,14 @@ class BtnTxtFieldVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+}
+
+class CSTextField: UITextField {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let defaultClearButton = UIButton.appearance(whenContainedInInstancesOf: [UITextField.self])
+        defaultClearButton.setImage(UIImage(named: "sc_btn_delete"), for: .normal)
+    }
+
 }
