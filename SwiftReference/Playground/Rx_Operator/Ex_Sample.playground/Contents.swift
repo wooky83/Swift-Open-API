@@ -19,10 +19,26 @@ do {
     let tip = BehaviorSubject<String?>(value: nil)
     let trigger = PublishSubject<Void>()
 
+    let csDis: Disposable = Observable.merge(tip.sample(trigger).take(1), tip.skip(until: trigger))
+        .filterNil()
+        .subscribe(onNext: {
+            print("Good Luck 1: \($0)")
+        })
+    
+    tip.onNext("1")
+    tip.onNext("2")
+    trigger.onNext(())
+    tip.onNext("3")
+    tip.onNext("4")
+    tip.onNext("5")
+    trigger.onNext(())
+    
+    csDis.dispose()
+    print("😀😀😀-----------------------------------")
     Observable.merge(tip.sample(trigger).take(1), tip.skip(until: trigger))
         .filterNil()
         .subscribe(onNext: {
-            print("Good Luck : \($0)")
+            print("Good Luck 2: \($0)")
         })
         .disposed(by: disposeBag)
     

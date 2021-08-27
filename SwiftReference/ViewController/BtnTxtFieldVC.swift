@@ -19,7 +19,6 @@ class BtnTxtFieldVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpObservable()
     }
     
@@ -77,6 +76,18 @@ class BtnTxtFieldVC: UIViewController {
             .subscribe { _ in
                 self.showAlert()
             }
+            .disposed(by: rx.disposeBag)
+        
+        self.rx.observe(CGRect.self, "frame")
+            .subscribe(onNext: {
+                print("frame is \(String(describing: $0))")
+            })
+            .disposed(by: rx.disposeBag)
+        
+        self.rx.observe(CGRect.self, #keyPath(UIView.bounds))
+            .subscribe(onNext: {
+                print("bounds is \(String(describing: $0))")
+            })
             .disposed(by: rx.disposeBag)
     }
     
