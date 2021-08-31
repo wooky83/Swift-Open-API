@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2C1FA2FF9E0046E9BB /* ReusableView.swift */; };
 		3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEFBB2E1FA300940046E9BB /* CSCell.swift */; };
 		3CF3EE9E203A9F2E00A417DB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CF3EE9D203A9F2E00A417DB /* README.md */; };
+		6B5DB38626DDC40D0032F673 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 6B5DB38526DDC40D0032F673 /* Algorithms */; };
 		D94D2A63D328EC3C611E850D /* Pods_SwiftReference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3F731DA2131E79BD26B3CF /* Pods_SwiftReference.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5DB38626DDC40D0032F673 /* Algorithms in Frameworks */,
 				D94D2A63D328EC3C611E850D /* Pods_SwiftReference.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +369,9 @@
 			dependencies = (
 			);
 			name = SwiftReference;
+			packageProductDependencies = (
+				6B5DB38526DDC40D0032F673 /* Algorithms */,
+			);
 			productName = SwiftReference;
 			productReference = 3C409E5B1F97275700159D84 /* SwiftReference.app */;
 			productType = "com.apple.product-type.application";
@@ -445,6 +450,9 @@
 				Base,
 			);
 			mainGroup = 3C409E521F97275700159D84;
+			packageReferences = (
+				6B5DB38426DDC40D0032F673 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 3C409E5C1F97275700159D84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -722,7 +730,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -739,7 +748,10 @@
 				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = SwiftReference/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftReference/SwiftReference-Bridging-Header.h";
@@ -758,7 +770,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftReference/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftReference/SwiftReference-Bridging-Header.h";
@@ -774,7 +789,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftReferenceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -790,7 +809,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftReferenceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -805,7 +828,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftReferenceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -820,7 +847,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftReferenceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wooky.SwiftReferenceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -869,6 +900,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B5DB38426DDC40D0032F673 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B5DB38526DDC40D0032F673 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B5DB38426DDC40D0032F673 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C409E531F97275700159D84 /* Project object */;
 }

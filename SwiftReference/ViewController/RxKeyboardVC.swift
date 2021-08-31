@@ -18,7 +18,6 @@ class RxKeyboardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservable()
-        
         for i in 1..<13 {
             let label = UILabel()
             label.frame = CGRect.init(x: 20, y: i*100, width: 100, height: 50)
