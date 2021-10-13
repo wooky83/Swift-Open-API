@@ -113,6 +113,7 @@
 		3CF88E8522DEBEC700EEC6E5 /* Pending.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Pending.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3CFC53EF2244B7E300CAF69D /* Async.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Async.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4919C9F8FAEA2F6F49CFF284 /* Pods-SwiftReference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReference.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftReference/Pods-SwiftReference.debug.xcconfig"; sourceTree = "<group>"; };
+		6B616F352716AD5100079A4E /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6B6634452710260A00768DE5 /* PublisherSubscriber.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PublisherSubscriber.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		87EEFF566A4CE3E6BFFE4E89 /* Pods_SwiftReferenceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReferenceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3F731DA2131E79BD26B3CF /* Pods_SwiftReference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +338,7 @@
 		6B663444271025AD00768DE5 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
+				6B616F352716AD5100079A4E /* Subject.playground */,
 				6B6634452710260A00768DE5 /* PublisherSubscriber.playground */,
 			);
 			path = Combine;

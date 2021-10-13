@@ -20,3 +20,35 @@ do {
     center.post(name: myNotification, object: nil)
     subscription.cancel()
 }
+
+do  {
+    let just = Just("Hello world!")
+    
+    just
+        .sink(
+            receiveCompletion: {
+                print("Received completion", $0)
+            },
+            receiveValue: {
+                print("Received value", $0)
+            })
+        .store(in: &subscriptions)
+}
+
+do  {
+    class SomeObject {
+        var value: String = "" {
+            didSet {
+                print(value)
+            }
+        }
+    }
+    
+    let object = SomeObject()
+    
+    ["Hello", "world!"].publisher
+        .assign(to: \.value, on: object)
+        .store(in: &subscriptions)
+}
+
+
