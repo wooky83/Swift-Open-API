@@ -16,6 +16,30 @@ func curry<A, B, C, D>(_ f: @escaping (A, B, C) -> D) -> (A) -> (B) -> (C) -> D 
     return { a in { b in { c in f(a, b, c) } } }
 }
 
+func flip<A, B>(_ function: @escaping (A) -> () -> B) -> () -> (A) -> B {
+    return { () -> (A) -> B in
+        { (a: A) -> B in
+            function(a)()
+        }
+    }
+}
+
+func flip<A, B, C>(_ function: @escaping (A) -> (B) -> C) -> (B) -> (A) -> C {
+    return { (b: B) -> (A) -> C in
+        { (a: A) -> C in
+            function(a)(b)
+        }
+    }
+}
+
+func flip<A, B, C, D>(_ function: @escaping (A) -> (B, C) -> D) -> (B, C) -> (A) -> D {
+    return { (b: B, c: C) -> (A) -> D in
+        { (a: A) -> D in
+            function(a)(b, c)
+        }
+    }
+}
+
 func bind<A, B>(_ a: A?, f: (A) -> B?) -> B?
 {
     if let x = a {
