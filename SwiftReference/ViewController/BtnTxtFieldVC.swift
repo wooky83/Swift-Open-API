@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BtnTxtFieldVC: UIViewController {
+class BtnTxtFieldVC: BaseVC {
     
     @IBOutlet weak var idTextF: UITextField!
     @IBOutlet weak var passwordTextF: UITextField!

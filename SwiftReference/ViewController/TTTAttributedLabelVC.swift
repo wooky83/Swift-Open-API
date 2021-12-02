@@ -11,7 +11,7 @@ import RxSwift
 import RxSwiftExt
 import RxCocoa
 
-class TTTAttributedLabelVC: UIViewController {
+class TTTAttributedLabelVC: BaseVC {
 
     @IBOutlet weak var attributedLb: TTTAttributedLabel!
     override func viewDidLoad() {

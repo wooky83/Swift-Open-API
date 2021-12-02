@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SearchVC: UIViewController {
+class SearchVC: BaseVC {
     
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!

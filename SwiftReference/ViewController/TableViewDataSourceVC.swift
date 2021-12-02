@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class TableViewDataSourceVC: UIViewController {
+class TableViewDataSourceVC: BaseVC {
     
     private let sections = [
         SectionOfCustomData(header: "Header_1", items:

@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxKeyboard
 
-class RxKeyboardVC: UIViewController {
+class RxKeyboardVC: BaseVC {
     
     
     @IBOutlet weak var scrollView: UIScrollView!
