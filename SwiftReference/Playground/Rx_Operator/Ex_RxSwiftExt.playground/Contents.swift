@@ -63,4 +63,21 @@ do {
     sj.onNext(Sport(name: "Golf", rate: 2, tag: "?"))
 }
 
+/*
+ ------(1)------(2)------(3)------(4)------
+ filterMap ($0 % 2 == 0)
+ ------(1)---------------(3)---------------
+ */
+
+do {
+    // keep only even numbers and double them
+    Observable.of(1,2,3,4)
+        .filterMap { number in
+            (number % 2 == 0) ? .ignore : .map(number * 2)
+        }
+        .subscribe(onNext: {
+            print($0)
+        })
+}
+
 PlaygroundPage.current.needsIndefiniteExecution = true
