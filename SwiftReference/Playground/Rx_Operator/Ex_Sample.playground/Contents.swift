@@ -35,17 +35,31 @@ do {
     
     csDis.dispose()
     print("😀😀😀-----------------------------------")
-    Observable.merge(tip.sample(trigger).take(1), tip.skip(until: trigger))
+    let dis = Observable.merge(tip.sample(trigger).take(1), tip.skip(until: trigger))
         .filterNil()
         .subscribe(onNext: {
             print("Good Luck 2: \($0)")
         })
-        .disposed(by: disposeBag)
     
     tip.onNext("1")
     tip.onNext("2")
     trigger.onNext(())
     tip.onNext("3")
+    tip.onNext("4")
+    tip.onNext("5")
+    trigger.onNext(())
+    
+    dis.dispose()
+    tip
+        .skipUntilSample(trigger)
+        .subscribe(onNext: {
+            print("Debug Here is \($0)")
+        })
+    
+    tip.onNext("1")
+    tip.onNext("2")
+    tip.onNext("3")
+    trigger.onNext(())
     tip.onNext("4")
     tip.onNext("5")
     trigger.onNext(())
@@ -80,3 +94,18 @@ do {
 }
 
 PlaygroundPage.current.needsIndefiniteExecution = true
+
+extension ObservableType {
+
+    /*
+     ------(1)-(2)-------(3)--------(4)------   //Value
+     --------------(*)-----------------------   //Trigger
+     Custom Sample(time)
+     --------------(2)---(3)--------(4)------
+     */
+
+    public func skipUntilSample<Source: ObservableType>(_ sampler: Source)
+        -> Observable<Element> {
+            return Observable.merge(self.asObservable().sample(sampler.asObservable()).take(1), self.asObservable().skip(until: sampler.asObservable()))
+    }
+}

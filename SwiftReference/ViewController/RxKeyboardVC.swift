@@ -8,12 +8,15 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import RxKeyboard
 
 class RxKeyboardVC: BaseVC {
     
     
     @IBOutlet weak var scrollView: UIScrollView!
+    private let itemsSjb = PublishRelay<Int>()
+    private let tirggerSbj = PublishRelay<Void>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,7 @@ class RxKeyboardVC: BaseVC {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
+        tirggerSbj.accept(())
     }
     
     private func setupObservable() {
@@ -45,7 +49,7 @@ class RxKeyboardVC: BaseVC {
         RxKeyboard.instance
             .visibleHeight
             .drive(onNext: { [weak self] keyboardVisibleHeight in
-                guard let `self` = self else {return}
+                guard let self = self else {return}
                 print("keyboardVisibleHeight : \(keyboardVisibleHeight)")
                 UIView.animate(withDuration: 0) {
                     self.scrollView.contentInset.bottom = keyboardVisibleHeight
@@ -57,7 +61,7 @@ class RxKeyboardVC: BaseVC {
         RxKeyboard.instance
             .willShowVisibleHeight
             .drive(onNext: { [weak self] visibleHeight in
-                guard let `self` = self else {return}
+                guard let self = self else {return}
                 print("willShowVisibleHeight : \(visibleHeight)")
                 self.scrollView.contentOffset.y += visibleHeight
             })
@@ -67,6 +71,20 @@ class RxKeyboardVC: BaseVC {
             .isHidden
             .drive(onNext: {
                 print("isHidden : \($0)")
+            })
+            .disposed(by: rx.disposeBag)
+        
+        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+            .withUnretained(self)
+            .subscribe(onNext: { owner, time in
+                owner.itemsSjb.accept(time)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        self.itemsSjb
+            .skipUntilSample(tirggerSbj)
+            .subscribe(onNext: {
+                print("Debug Here is \($0)")
             })
             .disposed(by: rx.disposeBag)
         
