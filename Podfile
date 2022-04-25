@@ -13,5 +13,5 @@ target 'SwiftReference' do
     pod 'RxOptional', '~> 5.0.1'
     pod 'PromiseKit', '~> 6.13.1'
     pod 'RxKeyboard', '~> 2.0.0'
-
+    pod 'ReSwift', '~> 6.1.0'
 end

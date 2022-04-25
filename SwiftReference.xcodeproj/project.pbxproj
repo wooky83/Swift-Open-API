@@ -32,6 +32,11 @@
 		6B7AED842758C56C00F7D60A /* CollectionDataSourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AED832758C56C00F7D60A /* CollectionDataSourceVC.swift */; };
 		6B7AED862758C69300F7D60A /* CollectionDataSourceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7AED852758C69300F7D60A /* CollectionDataSourceVC.xib */; };
 		6B7AED882758CE3700F7D60A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AED872758CE3700F7D60A /* BaseVC.swift */; };
+		6B9151E9281641E500DD5065 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9151E8281641E500DD5065 /* CounterReducer.swift */; };
+		6B9151EB281641EC00DD5065 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9151EA281641EC00DD5065 /* AppState.swift */; };
+		6B9151ED281641F400DD5065 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9151EC281641F400DD5065 /* Actions.swift */; };
+		6B9151EF2816424800DD5065 /* ReSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9151EE2816424800DD5065 /* ReSwiftVC.swift */; };
+		6B9151F22816435100DD5065 /* ReSwiftVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9151F12816435100DD5065 /* ReSwiftVC.xib */; };
 		6BCC402C2759AF8A00FDC6E1 /* Operator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCC402B2759AF8A00FDC6E1 /* Operator+Rx.swift */; };
 		D94D2A63D328EC3C611E850D /* Pods_SwiftReference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3F731DA2131E79BD26B3CF /* Pods_SwiftReference.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +127,11 @@
 		6B7AED832758C56C00F7D60A /* CollectionDataSourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSourceVC.swift; sourceTree = "<group>"; };
 		6B7AED852758C69300F7D60A /* CollectionDataSourceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionDataSourceVC.xib; sourceTree = "<group>"; };
 		6B7AED872758CE3700F7D60A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		6B9151E8281641E500DD5065 /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		6B9151EA281641EC00DD5065 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6B9151EC281641F400DD5065 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		6B9151EE2816424800DD5065 /* ReSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReSwiftVC.swift; sourceTree = "<group>"; };
+		6B9151F12816435100DD5065 /* ReSwiftVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReSwiftVC.xib; sourceTree = "<group>"; };
 		6B99F80627228DC900F0CB8B /* Transforming.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6BCC402B2759AF8A00FDC6E1 /* Operator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operator+Rx.swift"; sourceTree = "<group>"; };
 		87EEFF566A4CE3E6BFFE4E89 /* Pods_SwiftReferenceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReferenceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,9 +188,9 @@
 				3C874E3121CB69A7009D819D /* TableViewDataSourceVC.swift */,
 				3C899DD221E33431005E3754 /* SimpleCollectionVC.swift */,
 				6B7AED832758C56C00F7D60A /* CollectionDataSourceVC.swift */,
-				6B7AED852758C69300F7D60A /* CollectionDataSourceVC.xib */,
 				3C95CC2E21FECA6900A3E699 /* RxKeyboardVC.swift */,
 				3C375F3A231F800D0036E817 /* TTTAttributedLabelVC.swift */,
+				6B9151EE2816424800DD5065 /* ReSwiftVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -201,6 +211,7 @@
 		3C0A8D441F9DC7D1001E98BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B9151F02816433E00DD5065 /* Xib */,
 				3C886E8F21C9E5160064636F /* Cell */,
 				3CEFBB2B1FA2FF3B0046E9BB /* StoryBoard */,
 			);
@@ -243,6 +254,7 @@
 			children = (
 				3C874E2D21CB3543009D819D /* Playground */,
 				3C375F3C231F80CD0036E817 /* OpenSource */,
+				6B9151E4281641B000DD5065 /* ReSwift */,
 				3C0A8D411F9DC774001E98BA /* ViewController */,
 				3C0A8D441F9DC7D1001E98BA /* View */,
 				3C0A8D431F9DC787001E98BA /* Utility */,
@@ -356,6 +368,49 @@
 				6B6634452710260A00768DE5 /* PublisherSubscriber.playground */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		6B9151E4281641B000DD5065 /* ReSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6B9151E7281641C300DD5065 /* Reducers */,
+				6B9151E6281641C000DD5065 /* State */,
+				6B9151E5281641BC00DD5065 /* Actions */,
+			);
+			path = ReSwift;
+			sourceTree = "<group>";
+		};
+		6B9151E5281641BC00DD5065 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				6B9151EC281641F400DD5065 /* Actions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		6B9151E6281641C000DD5065 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				6B9151EA281641EC00DD5065 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		6B9151E7281641C300DD5065 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				6B9151E8281641E500DD5065 /* CounterReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		6B9151F02816433E00DD5065 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				6B7AED852758C69300F7D60A /* CollectionDataSourceVC.xib */,
+				6B9151F12816435100DD5065 /* ReSwiftVC.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		94108E86494FDFD00997F901 /* Frameworks */ = {
@@ -500,6 +555,7 @@
 				3C409E681F97275700159D84 /* Assets.xcassets in Resources */,
 				3CF3EE9E203A9F2E00A417DB /* README.md in Resources */,
 				3C409E661F97275700159D84 /* Main.storyboard in Resources */,
+				6B9151F22816435100DD5065 /* ReSwiftVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +585,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftReference/Pods-SwiftReference-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
@@ -541,6 +598,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
@@ -584,6 +642,7 @@
 				3C82F0011F9DDC9C00B34528 /* BtnTxtFieldVC.swift in Sources */,
 				3CEFBB2F1FA300940046E9BB /* CSCell.swift in Sources */,
 				3C375F42231F838D0036E817 /* TTTAttributedLabel+Rx.swift in Sources */,
+				6B9151EB281641EC00DD5065 /* AppState.swift in Sources */,
 				3C375F40231F80EE0036E817 /* TTTAttributedLabel.m in Sources */,
 				3CA7C6661F98425C005BA15E /* Swift-Prefix.swift in Sources */,
 				3C375F3B231F800D0036E817 /* TTTAttributedLabelVC.swift in Sources */,
@@ -592,10 +651,13 @@
 				3C95CC2F21FECA6900A3E699 /* RxKeyboardVC.swift in Sources */,
 				3C874E3221CB69A7009D819D /* TableViewDataSourceVC.swift in Sources */,
 				3CEFBB2D1FA2FF9E0046E9BB /* ReusableView.swift in Sources */,
+				6B9151EF2816424800DD5065 /* ReSwiftVC.swift in Sources */,
 				3C409E5F1F97275700159D84 /* AppDelegate.swift in Sources */,
 				3C409E611F97275700159D84 /* MainVC.swift in Sources */,
+				6B9151ED281641F400DD5065 /* Actions.swift in Sources */,
 				6BCC402C2759AF8A00FDC6E1 /* Operator+Rx.swift in Sources */,
 				3C899DD321E33431005E3754 /* SimpleCollectionVC.swift in Sources */,
+				6B9151E9281641E500DD5065 /* CounterReducer.swift in Sources */,
 				3C886E9121C9FECD0064636F /* NSObject+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
+  - ReSwift (6.1.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
@@ -36,6 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - PromiseKit (~> 6.13.1)
+  - ReSwift (~> 6.1.0)
   - RxCocoa (~> 6.1.0)
   - RxDataSources (~> 5.0.0)
   - RxKeyboard (~> 2.0.0)
@@ -47,6 +49,7 @@ SPEC REPOS:
   trunk:
     - Differentiator
     - PromiseKit
+    - ReSwift
     - RxCocoa
     - RxDataSources
     - RxKeyboard
@@ -58,6 +61,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  ReSwift: eab3c01e4279ba81b54a61e4fd6499634d20123a
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
@@ -66,6 +70,6 @@ SPEC CHECKSUMS:
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
 
-PODFILE CHECKSUM: 1f661c6dccbb8959607f2bda6cb3c16a38f1e958
+PODFILE CHECKSUM: 7125e29fe477263dbf71c37923a33bac3097776c
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

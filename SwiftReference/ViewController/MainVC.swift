@@ -21,7 +21,8 @@ class MainVC: BaseVC {
         ("Simple+UICollectionView", "\(SimpleCollectionVC.self)", SimpleCollectionVC.self),
         ("RxKeyboard", "\(RxKeyboardVC.self)", RxKeyboardVC.self),
         ("RxTTTAttributedLabel", "\(TTTAttributedLabelVC.self)", TTTAttributedLabelVC.self),
-        ("RxCollectionDataSource", "\(CollectionDataSourceVC.self)", CollectionDataSourceVC.self)
+        ("RxCollectionDataSource", "\(CollectionDataSourceVC.self)", CollectionDataSourceVC.self),
+        ("ReSwift", "\(ReSwiftVC.self)", ReSwiftVC.self)
     ])
     
     
