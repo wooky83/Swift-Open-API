@@ -1,25 +1,77 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "swift-algorithms",
-        "repositoryURL": "https://github.com/apple/swift-algorithms.git",
-        "state": {
-          "branch": null,
-          "revision": "2327673b0e9c7e90e6b1826376526ec3627210e4",
-          "version": "0.2.1"
-        }
-      },
-      {
-        "package": "swift-numerics",
-        "repositoryURL": "https://github.com/apple/swift-numerics",
-        "state": {
-          "branch": null,
-          "revision": "6583ac70c326c3ee080c1d42d9ca3361dca816cd",
-          "version": "0.1.0"
-        }
+  "pins" : [
+    {
+      "identity" : "promisekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mxcl/PromiseKit",
+      "state" : {
+        "revision" : "43772616c46a44a9977e41924ae01d0e55f2f9ca",
+        "version" : "6.18.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "reswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReSwift/ReSwift",
+      "state" : {
+        "revision" : "96146a29f394ae4c79be025fcec194e5b0d9c3b6",
+        "version" : "6.1.0"
+      }
+    },
+    {
+      "identity" : "rxdatasources",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxDataSources",
+      "state" : {
+        "revision" : "90c29b48b628479097fe775ed1966d75ac374518",
+        "version" : "5.0.2"
+      }
+    },
+    {
+      "identity" : "rxkeyboard",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxKeyboard",
+      "state" : {
+        "revision" : "085fd99d7bb4f98e671904fcfe7ff561e66574ad",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift",
+      "state" : {
+        "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
+        "version" : "6.5.0"
+      }
+    },
+    {
+      "identity" : "rxswiftext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxSwiftExt",
+      "state" : {
+        "revision" : "a42af9caeab63f2dbde318f1f3dc424f05871a37",
+        "version" : "6.1.0"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms.git",
+      "state" : {
+        "revision" : "2327673b0e9c7e90e6b1826376526ec3627210e4",
+        "version" : "0.2.1"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "revision" : "6583ac70c326c3ee080c1d42d9ca3361dca816cd",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
 }

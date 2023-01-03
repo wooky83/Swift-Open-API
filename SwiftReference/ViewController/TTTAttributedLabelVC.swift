@@ -24,13 +24,6 @@ class TTTAttributedLabelVC: BaseVC {
             attributedLb.addLink(to: URL(string: "http://www.google.com"), with: text.range(of: "코치"))
         }
         
-        attributedLb.rx
-            .didSelectLink
-            .unwrap()
-            .subscribe(onNext: {
-                UIApplication.shared.open($0, options: [:], completionHandler: nil)
-            })
-            .disposed(by: rx.disposeBag)
         
         let custom = CustomClass()
         custom.rx
